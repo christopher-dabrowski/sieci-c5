@@ -1,0 +1,612 @@
+Script started on pon, 27 maj 2019, 16:54:03
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[1m[31me[0m[39m[90mcho "Uprzejmie prosze o uruchomienie systemu FreeBSD na stacji s2 lub s[90m3[90m" | mail ato[39m[K[A[1m[31me[1m[31mc[0m[39m[1m[31me[1m[31mc[1m[31mh[0m[39m[0m[32me[0m[32mc[0m[32mh[32mo[39m[39m [33m"[39m[33m"[33mI[39m[K[1B[K[A[15C[33mI[33mn[39m[33mn[33ms[39m[33ms[33mt[39m[33mt[33ma[39m[33ma[33ml[39m[33ml[33ma[39m[33ma[33mc[39m[33mc[33mj[39m[33mj[33ma[39m[33ma[33m [39m[33m [33mS[39m[33mS[33mM[39m[33mM[33mB[39m[33mB[33m"[39m[?1l>[?2004l[1B]2;echo "Instalacja SMB"]1;echoInstalacja SMB
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[H[2J[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[7m[4m[32msudo[24m[39m[7m [7m[32mapt[39m[7m update[27m[15D[27m[4m[32ms[27m[4m[32mu[27m[4m[32md[27m[4m[32mo[24m[39m[27m [27m[32ma[27m[32mp[27m[32mt[39m[27m [27mu[27mp[27md[27ma[27mt[27me[?1l>[?2004l
+]2;sudo apt update]1;apt[33m0% [Pracuje][0m            Stary:1 http://archive.ubuntu.com/ubuntu xenial InRelease
+[33m0% [Oczekiwanie na nagłówki][0m                              Pobieranie:2 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
+[33m0% [Oczekiwanie na nagłówki] [2 InRelease 2265 B/109 kB 2%][0m[33m0% [1 InRelease gpgv 247 kB] [Oczekiwanie na nagłówki] [2 InRelease 2265 B/10[0m                                                                               Stary:3 http://archive.ubuntu.com/ubuntu xenial-updates InRelease
+[33m                                                                               0% [1 InRelease gpgv 247 kB] [2 InRelease 12,6 kB/109 kB 12%][0m[33m                                                             0% [2 InRelease 55,1 kB/109 kB 50%][0m[33m0% [3 InRelease gpgv 109 kB] [2 InRelease 55,1 kB/109 kB 50%][0m[33m                                                             0% [3 InRelease gpgv 109 kB][0m[33m                            0% [Pracuje][0m[33m0% [2 InRelease gpgv 109 kB][0m[33m                            0% [Pracuje][0m            Stary:4 https://packages.microsoft.com/repos/vscode stable InRelease
+[33m97% [Pracuje][0m[33m97% [4 InRelease gpgv 3182 B][0m[33m                             100% [Pracuje][0m              Pobrano 109 kB w 0s (235 kB/s)
+Czytanie list pakietów... 0%Czytanie list pakietów... 0%Czytanie list pakietów... 1%Czytanie list pakietów... 6%Czytanie list pakietów... 6%Czytanie list pakietów... 7%Czytanie list pakietów... 7%Czytanie list pakietów... 10%Czytanie list pakietów... 10%Czytanie list pakietów... 10%Czytanie list pakietów... 10%Czytanie list pakietów... 10%Czytanie list pakietów... 10%Czytanie list pakietów... 10%Czytanie list pakietów... 10%Czytanie list pakietów... 45%Czytanie list pakietów... 45%Czytanie list pakietów... 48%Czytanie list pakietów... 48%Czytanie list pakietów... 68%Czytanie list pakietów... 68%Czytanie list pakietów... 68%Czytanie list pakietów... 68%Czytanie list pakietów... 68%Czytanie list pakietów... 68%Czytanie list pakietów... 69%Czytanie list pakietów... 69%Czytanie list pakietów... 73%Czytanie list pakietów... 73%Czytanie list pakietów... 76%Czytanie list pakietów... 76%Czytanie list pakietów... 76%Czytanie list pakietów... 76%Czytanie list pakietów... 76%Czytanie list pakietów... 76%Czytanie list pakietów... 79%Czytanie list pakietów... 79%Czytanie list pakietów... 80%Czytanie list pakietów... 80%Czytanie list pakietów... 80%Czytanie list pakietów... 80%Czytanie list pakietów... 80%Czytanie list pakietów... 80%Czytanie list pakietów... 86%Czytanie list pakietów... 86%Czytanie list pakietów... 91%Czytanie list pakietów... 91%Czytanie list pakietów... 91%Czytanie list pakietów... 91%Czytanie list pakietów... 91%Czytanie list pakietów... 91%Czytanie list pakietów... 95%Czytanie list pakietów... 95%Czytanie list pakietów... 95%Czytanie list pakietów... 97%Czytanie list pakietów... 97%Czytanie list pakietów... 97%Czytanie list pakietów... 97%Czytanie list pakietów... 97%Czytanie list pakietów... 97%Czytanie list pakietów... 98%Czytanie list pakietów... 98%Czytanie list pakietów... Gotowe
+Budowanie drzewa zależności... 0%Budowanie drzewa zależności... 0%Budowanie drzewa zależności... 1%Budowanie drzewa zależności... 50%Budowanie drzewa zależności... 50%Budowanie drzewa zależności       
+Odczyt informacji o stanie... 0%Odczyt informacji o stanie... 0%Odczyt informacji o stanie... Gotowe
+990 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[7m[4m[32msudo[24m[39m[7m [7m[32mapt[39m[7m install samba[27m[22D[27m[4m[32ms[27m[4m[32mu[27m[4m[32md[27m[4m[32mo[24m[39m[27m [27m[32ma[27m[32mp[27m[32mt[39m[27m [27mi[27mn[27ms[27mt[27ma[27ml[27ml[27m [27ms[27ma[27mm[27mb[27ma[?1l>[?2004l
+]2;sudo apt install samba]1;aptCzytanie list pakietów... 0%Czytanie list pakietów... 100%Czytanie list pakietów... Gotowe
+Budowanie drzewa zależności... 0%Budowanie drzewa zależności... 0%Budowanie drzewa zależności... 50%Budowanie drzewa zależności... 50%Budowanie drzewa zależności       
+Odczyt informacji o stanie... 0%Odczyt informacji o stanie... 0%Odczyt informacji o stanie... Gotowe
+The following additional packages will be installed:
+  libsmbclient libwbclient0 python-samba samba-common samba-common-bin
+  samba-dsdb-modules samba-libs samba-vfs-modules smbclient
+Sugerowane pakiety:
+  bind9 bind9utils ctdb ldb-tools ntp winbind heimdal-clients
+Następujące pakiety zostaną zaktualizowane:
+  libsmbclient libwbclient0 python-samba samba samba-common samba-common-bin
+  samba-dsdb-modules samba-libs samba-vfs-modules smbclient
+10 aktualizowanych, 0 nowo instalowanych, 0 usuwanych i 980 nieaktualizowanych.
+Konieczne pobranie 8585 kB archiwów.
+Po tej operacji zostanie dodatkowo użyte 248 kB miejsca na dysku.
+Kontynuować? [T/n] T
+[33m0% [Pracuje][0m            Pobieranie:1 http://security.ubuntu.com/ubuntu xenial-security/main amd64 samba-dsdb-modules amd64 2:4.3.11+dfsg-0ubuntu0.16.04.21 [216 kB]
+[33m0% [1 samba-dsdb-modules 2483 B/216 kB 1%][0m[33m                                          4% [Pracuje][0m            Pobieranie:2 http://security.ubuntu.com/ubuntu xenial-security/main amd64 python-samba amd64 2:4.3.11+dfsg-0ubuntu0.16.04.21 [1057 kB]
+[33m4% [2 python-samba 6585 B/1057 kB 1%][0m[33m                                     16% [Oczekiwanie na nagłówki][0m                               Pobieranie:3 http://security.ubuntu.com/ubuntu xenial-security/main amd64 samba amd64 2:4.3.11+dfsg-0ubuntu0.16.04.21 [902 kB]
+[33m16% [3 samba 17,9 kB/902 kB 2%][0m[33m26% [Oczekiwanie na nagłówki][0m                               Pobieranie:4 http://security.ubuntu.com/ubuntu xenial-security/main amd64 samba-common-bin amd64 2:4.3.11+dfsg-0ubuntu0.16.04.21 [506 kB]
+[33m26% [4 samba-common-bin 23,0 kB/506 kB 5%][0m[33m                                          33% [Pracuje][0m             Pobieranie:5 http://security.ubuntu.com/ubuntu xenial-security/main amd64 smbclient amd64 2:4.3.11+dfsg-0ubuntu0.16.04.21 [310 kB]
+[33m33% [5 smbclient 5155 B/310 kB 2%][0m[33m                                  38% [Oczekiwanie na nagłówki][0m                               Pobieranie:6 http://security.ubuntu.com/ubuntu xenial-security/main amd64 samba-vfs-modules amd64 2:4.3.11+dfsg-0ubuntu0.16.04.21 [256 kB]
+[33m38% [6 samba-vfs-modules 22,2 kB/256 kB 9%][0m[33m                                           42% [Oczekiwanie na nagłówki][0m                               Pobieranie:7 http://security.ubuntu.com/ubuntu xenial-security/main amd64 samba-libs amd64 2:4.3.11+dfsg-0ubuntu0.16.04.21 [5170 kB]
+[33m43% [7 samba-libs 27,6 kB/5170 kB 1%][0m[33m                                     92% [Oczekiwanie na nagłówki][0m                               Pobieranie:8 http://security.ubuntu.com/ubuntu xenial-security/main amd64 libwbclient0 amd64 2:4.3.11+dfsg-0ubuntu0.16.04.21 [30,3 kB]
+[33m93% [8 libwbclient0 30,3 kB/30,3 kB 100%][0m[33m                                         95% [Oczekiwanie na nagłówki][0m                               Pobieranie:9 http://security.ubuntu.com/ubuntu xenial-security/main amd64 libsmbclient amd64 2:4.3.11+dfsg-0ubuntu0.16.04.21 [53,2 kB]
+[33m95% [9 libsmbclient 53,2 kB/53,2 kB 100%][0m[33m                                         97% [Oczekiwanie na nagłówki][0m                               Pobieranie:10 http://security.ubuntu.com/ubuntu xenial-security/main amd64 samba-common all 2:4.3.11+dfsg-0ubuntu0.16.04.21 [83,9 kB]
+[33m97% [10 samba-common 15,7 kB/83,9 kB 19%][0m[33m                                         100% [Pracuje][0m              Pobrano 8585 kB w 0s (16,8 MB/s)
+Prekonfiguracja pakietów ...
+
+7[0;23r8[1A(Odczytywanie bazy danych ... (Odczytywanie bazy danych ... 5%(Odczytywanie bazy danych ... 10%(Odczytywanie bazy danych ... 15%(Odczytywanie bazy danych ... 20%(Odczytywanie bazy danych ... 25%(Odczytywanie bazy danych ... 30%(Odczytywanie bazy danych ... 35%(Odczytywanie bazy danych ... 40%(Odczytywanie bazy danych ... 45%(Odczytywanie bazy danych ... 50%(Odczytywanie bazy danych ... 55%(Odczytywanie bazy danych ... 60%(Odczytywanie bazy danych ... 65%(Odczytywanie bazy danych ... 70%(Odczytywanie bazy danych ... 75%(Odczytywanie bazy danych ... 80%(Odczytywanie bazy danych ... 85%(Odczytywanie bazy danych ... 90%(Odczytywanie bazy danych ... 95%(Odczytywanie bazy danych ... 100%(Odczytywanie bazy danych ... 220719 plików i katalogów obecnie zainstalowanych.)
+Przygotowywanie do rozpakowania pakietu .../samba-dsdb-modules_2%3a4.3.11+dfsg-0ubuntu0.16.04.21_amd64.deb ...
+7[24;0f[42m[30mProgress: [  0%][49m[39m [..........................................................] 87[24;0f[42m[30mProgress: [  1%][49m[39m [##........................................................] 8Rozpakowywanie pakietu samba-dsdb-modules (2:4.3.11+dfsg-0ubuntu0.16.04.21) nad (2:4.3.6+dfsg-1ubuntu1) ...
+7[24;0f[42m[30mProgress: [  3%][49m[39m [###.......................................................] 87[24;0f[42m[30mProgress: [  5%][49m[39m [####......................................................] 8Przygotowywanie do rozpakowania pakietu .../python-samba_2%3a4.3.11+dfsg-0ubuntu0.16.04.21_amd64.deb ...
+7[24;0f[42m[30mProgress: [  7%][49m[39m [#####.....................................................] 8Rozpakowywanie pakietu python-samba (2:4.3.11+dfsg-0ubuntu0.16.04.21) nad (2:4.3.6+dfsg-1ubuntu1) ...
+7[24;0f[42m[30mProgress: [  9%][49m[39m [######....................................................] 87[24;0f[42m[30mProgress: [ 11%][49m[39m [#######...................................................] 8Przygotowywanie do rozpakowania pakietu .../samba_2%3a4.3.11+dfsg-0ubuntu0.16.04.21_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 13%][49m[39m [########..................................................] 8Rozpakowywanie pakietu samba (2:4.3.11+dfsg-0ubuntu0.16.04.21) nad (2:4.3.6+dfsg-1ubuntu1) ...
+7[24;0f[42m[30mProgress: [ 15%][49m[39m [##########................................................] 87[24;0f[42m[30mProgress: [ 17%][49m[39m [###########...............................................] 8Przygotowywanie do rozpakowania pakietu .../samba-common-bin_2%3a4.3.11+dfsg-0ubuntu0.16.04.21_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 19%][49m[39m [############..............................................] 8Rozpakowywanie pakietu samba-common-bin (2:4.3.11+dfsg-0ubuntu0.16.04.21) nad (2:4.3.6+dfsg-1ubuntu1) ...
+7[24;0f[42m[30mProgress: [ 21%][49m[39m [#############.............................................] 87[24;0f[42m[30mProgress: [ 23%][49m[39m [##############............................................] 8Przygotowywanie do rozpakowania pakietu .../smbclient_2%3a4.3.11+dfsg-0ubuntu0.16.04.21_amd64.deb ...
+Rozpakowywanie pakietu smbclient (2:4.3.11+dfsg-0ubuntu0.16.04.21) nad (2:4.3.6+dfsg-1ubuntu1) ...
+7[24;0f[42m[30mProgress: [ 25%][49m[39m [###############...........................................] 87[24;0f[42m[30mProgress: [ 27%][49m[39m [################..........................................] 87[24;0f[42m[30mProgress: [ 29%][49m[39m [##################........................................] 8Przygotowywanie do rozpakowania pakietu .../samba-vfs-modules_2%3a4.3.11+dfsg-0ubuntu0.16.04.21_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 31%][49m[39m [###################.......................................] 8Rozpakowywanie pakietu samba-vfs-modules (2:4.3.11+dfsg-0ubuntu0.16.04.21) nad (2:4.3.6+dfsg-1ubuntu1) ...
+7[24;0f[42m[30mProgress: [ 33%][49m[39m [####################......................................] 87[24;0f[42m[30mProgress: [ 35%][49m[39m [#####################.....................................] 8Przygotowywanie do rozpakowania pakietu .../samba-libs_2%3a4.3.11+dfsg-0ubuntu0.16.04.21_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 37%][49m[39m [######################....................................] 8Rozpakowywanie pakietu samba-libs:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.21) nad (2:4.3.6+dfsg-1ubuntu1) ...
+7[24;0f[42m[30mProgress: [ 39%][49m[39m [#######################...................................] 87[24;0f[42m[30mProgress: [ 41%][49m[39m [########################..................................] 8Przygotowywanie do rozpakowania pakietu .../libwbclient0_2%3a4.3.11+dfsg-0ubuntu0.16.04.21_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 43%][49m[39m [##########################................................] 8Rozpakowywanie pakietu libwbclient0:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.21) nad (2:4.3.6+dfsg-1ubuntu1) ...
+7[24;0f[42m[30mProgress: [ 45%][49m[39m [###########################...............................] 87[24;0f[42m[30mProgress: [ 47%][49m[39m [############################..............................] 8Przygotowywanie do rozpakowania pakietu .../libsmbclient_2%3a4.3.11+dfsg-0ubuntu0.16.04.21_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 49%][49m[39m [#############################.............................] 8Rozpakowywanie pakietu libsmbclient:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.21) nad (2:4.3.6+dfsg-1ubuntu1) ...
+7[24;0f[42m[30mProgress: [ 50%][49m[39m [##############################............................] 87[24;0f[42m[30mProgress: [ 52%][49m[39m [###############################...........................] 8Przygotowywanie do rozpakowania pakietu .../samba-common_2%3a4.3.11+dfsg-0ubuntu0.16.04.21_all.deb ...
+7[24;0f[42m[30mProgress: [ 54%][49m[39m [################################..........................] 8Rozpakowywanie pakietu samba-common (2:4.3.11+dfsg-0ubuntu0.16.04.21) nad (2:4.3.6+dfsg-1ubuntu1) ...
+7[24;0f[42m[30mProgress: [ 56%][49m[39m [#################################.........................] 87[24;0f[42m[30mProgress: [ 58%][49m[39m [###################################.......................] 8Przetwarzanie wyzwalaczy pakietu libc-bin (2.21-0ubuntu6)...
+Przetwarzanie wyzwalaczy pakietu ufw (0.35-0ubuntu1)...
+Przetwarzanie wyzwalaczy pakietu ureadahead (0.100.0-19)...
+Przetwarzanie wyzwalaczy pakietu systemd (229-2ubuntu1)...
+Przetwarzanie wyzwalaczy pakietu man-db (2.7.5-1)...
+Konfigurowanie pakietu libwbclient0:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.21) ...
+7[24;0f[42m[30mProgress: [ 60%][49m[39m [####################################......................] 87[24;0f[42m[30mProgress: [ 62%][49m[39m [#####################################.....................] 8Konfigurowanie pakietu samba-libs:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.21) ...
+7[24;0f[42m[30mProgress: [ 64%][49m[39m [######################################....................] 87[24;0f[42m[30mProgress: [ 66%][49m[39m [#######################################...................] 8Konfigurowanie pakietu samba-dsdb-modules (2:4.3.11+dfsg-0ubuntu0.16.04.21) ...
+7[24;0f[42m[30mProgress: [ 68%][49m[39m [########################################..................] 87[24;0f[42m[30mProgress: [ 70%][49m[39m [#########################################.................] 8Konfigurowanie pakietu python-samba (2:4.3.11+dfsg-0ubuntu0.16.04.21) ...
+7[24;0f[42m[30mProgress: [ 72%][49m[39m [###########################################...............] 87[24;0f[42m[30mProgress: [ 74%][49m[39m [############################################..............] 8Konfigurowanie pakietu samba-common (2:4.3.11+dfsg-0ubuntu0.16.04.21) ...
+7[24;0f[42m[30mProgress: [ 76%][49m[39m [#############################################.............] 87[24;0f[42m[30mProgress: [ 78%][49m[39m [##############################################............] 8Konfigurowanie pakietu samba-common-bin (2:4.3.11+dfsg-0ubuntu0.16.04.21) ...
+7[24;0f[42m[30mProgress: [ 80%][49m[39m [###############################################...........] 87[24;0f[42m[30mProgress: [ 82%][49m[39m [################################################..........] 8Konfigurowanie pakietu samba (2:4.3.11+dfsg-0ubuntu0.16.04.21) ...
+Instalowanie nowej wersji pliku konfiguracyjnego /etc/init.d/nmbd ...
+Instalowanie nowej wersji pliku konfiguracyjnego /etc/init.d/samba-ad-dc ...
+Instalowanie nowej wersji pliku konfiguracyjnego /etc/init.d/smbd ...
+7[24;0f[42m[30mProgress: [ 84%][49m[39m [#################################################.........] 87[24;0f[42m[30mProgress: [ 86%][49m[39m [###################################################.......] 8Konfigurowanie pakietu libsmbclient:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.21) ...
+7[24;0f[42m[30mProgress: [ 88%][49m[39m [####################################################......] 87[24;0f[42m[30mProgress: [ 90%][49m[39m [#####################################################.....] 8Konfigurowanie pakietu smbclient (2:4.3.11+dfsg-0ubuntu0.16.04.21) ...
+7[24;0f[42m[30mProgress: [ 92%][49m[39m [######################################################....] 87[24;0f[42m[30mProgress: [ 94%][49m[39m [#######################################################...] 8Konfigurowanie pakietu samba-vfs-modules (2:4.3.11+dfsg-0ubuntu0.16.04.21) ...
+7[24;0f[42m[30mProgress: [ 96%][49m[39m [########################################################..] 87[24;0f[42m[30mProgress: [ 98%][49m[39m [#########################################################.] 8Przetwarzanie wyzwalaczy pakietu libc-bin (2.21-0ubuntu6)...
+Przetwarzanie wyzwalaczy pakietu ureadahead (0.100.0-19)...
+Przetwarzanie wyzwalaczy pakietu systemd (229-2ubuntu1)...
+
+7[0;24r8[1A[J[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[H[2J[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[7m[32mwhereis[39m[7m samba[27m[13D[27m[32mw[27m[32mh[27m[32me[27m[32mr[27m[32me[27m[32mi[27m[32ms[39m[27m [27ms[27ma[27mm[27mb[27ma[?1l>[?2004l
+]2;whereis samba]1;whereissamba: /usr/sbin/samba /usr/lib/samba /etc/samba /usr/share/samba /usr/share/man/man7/samba.7.gz /usr/share/man/man8/samba.8.gz
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[1m[31me[0m[39m[90mcho "Instalacja SMB"[39m[20D[1m[31me[1m[31mc[0m[39m[1m[31me[1m[31mc[1m[31mh[0m[39m[0m[32me[0m[32mc[0m[32mh[32mo[39m[39m [33m"[39m[33m"[33mU[39m[90mp[90mr[90mz[90me[90mj[90mm[90mi[90me[90m [90mp[90mr[90mo[90ms[90mz[90me o uruchomienie systemu FreeBSD na stacji s2 lub s[90m3[90m" | mail ato[39m[K[A[2C[33mU[33mt[39m[K[1B[K[A[16C[33mt[33mw[39m[33mw[33mo[39m[33mo[33mr[39m[33mr[33mz[39m[33mz[33me[39m[33me[33mn[39m[33mn[33mi[39m[33mi[33me[39m[33me[33m [39m[33m [33mk[39m[33mk[33ma[39m[33ma[33mt[39m[33mt[33ma[39m[33ma[33ml[39m[33ml[33mo[39m[33mo[33mg[39m[33mg[33mu[39m[33mg[39m[39m [33mo[39m[39m [33mo[33mg[39m[33mg[33mu[39m[33mu[33m [39m[33m [33md[39m[33md[33mo[39m[33mo[33m [39m[33m [33mu[39m[33mu[33md[39m[33md[33mo[39m[33mo[33ms[39m[33ms[33mt[39m[33mt[33mę[39m[33mę[33mp[39m[33mp[33mn[39m[33mn[33mi[39m[33mi[33me[39m[33me[33mn[39m[33mn[33mi[39m[33mi[33ma[39m[33ma[33m"[39m[?1l>[?2004l[1B]2;echo "Utworzenie katalogu do udostępnienia"]1;echoUtworzenie katalogu do udostępnienia
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[H[2J[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[32ml[39m[90ml[39m[32ml[32ms[39m[90m kreacjaMaszyn[39m[14D[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [14D[?1l>[?2004l
+]2;ls --color=tty]1;ls[0m[01;34mbin[0m               historiaC5L1             [01;34mMuzyka[0m     [01;34mPulpit[0m          [01;34mWINDOWS[0m
+Co_robiłem_c5.md  [01;34mkreacjaMaszyn[0m            [01;34mObrazy[0m     [01;34mSzablony[0m        [01;34mWWW[0m
+[01;34mDesktop[0m           [01;34mlabsk[0m                    [01;34mPictures[0m   [01;34mTemplates[0m
+[01;34mDocuments[0m         [01;34mmaterialy_do_sprawozdan[0m  [01;34mPobrane[0m    [01;34mVideos[0m
+[01;34mDokumenty[0m         microsoft.gpg            [01;34mPublic[0m     [01;34mVirtualBox VMs[0m
+[01;34mDownloads[0m         [01;34mMusic[0m                    [01;34mPubliczny[0m  [01;34mWideo[0m
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[4mm[24m[90mv pw.edu.pl_Podlaczony.png materialy_do_sprawozdan/c4/[39m[54D[24m[1m[31mm[1m[31mk[0m[39m[90md[90mi[90mr[90m [90mt[90mm[90mp[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [53D[1m[31mm[1m[31mk[1m[31md[0m[39m[1m[31md[1m[31mi[0m[39m[0m[32mm[0m[32mk[0m[32md[0m[32mi[32mr[39m[39m [39mp[39m [39m ublicznyKatalog[?1l>[?2004l
+]2;mkdir publicznyKatalog]1;mkdir[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[32mc[39m[90mode[39m[32mc[32md[39m[90m [90mc[90m4[39m[39m [39m[4mp[24m[39m [4mp[4mu[24m[4mu[4mb[24m[4mb[4mlic[24m[4mc[4mz[24m[4mz[4mny[24m[9D[24mp[24mu[24mb[24ml[24mi[24mc[24mz[24mn[24my
+[J[01;34mPubliczny[0m/         [J[01;34mpublicznyKatalog[0m/[J[A[0m[27m[24m[8C[32mcd[39m publiczny[K[9D[4mp[4mu[4mb[4ml[4mi[4mc[4mz[4mn[24m [4mz[24m[24m [4mc[24m[24m [4mi[24m[24m [4ml[24m[24m [4mb[24m[24m [4mu[24m[24m [4mp[24m[24m [24m[90mc[90m4[39m[90m [32mc[39m[90mo[90md[90me[39m[39m [39m [39m [39m [39m [4mm[24m[90mkdir publicznyKatalog[39m[21D[24m[32mm[32mv[39m[90m [90mp[90mw[90m.[90me[90md[90mu[90m.[90mp[90ml[90m_[90mP[90mo[90md[90ml[90ma[90mc[90mz[90mo[90mn[90my.png materialy_do_sprawozdan/c4/[39m[53D[39m [39m[4mp[24m[4mp[39m[4mu[24m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [50D[4mu[4mb[24m
+[J[A[14C[4mb[4mlic[24m[4mc[4mz[24m[4mz[4mn[24m[4mz[24m[24m [4mz[4mn[24m[4mn[4my[24m[4my[4mK[24m[4mK[4matalog[1m[4m/[0m[24m[4mg[24m[0m[24m  [4mk[24m[24mkatalogSMB[?1l>[?2004l
+[J]2;mv publicznyKatalog katalogSMB]1;mv[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[H[2J[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[1m[31mv[0m[39m[90mm mk -h[39m[0m[32mv[32mi[39m[90mm[90m [90m/[90me[90mt[90mc[90m/exports[39m[14D[32mv[32mi[32mm[39m[39m 
+[01;34mbin[0m/                      [01;34mlabsk[0m/                    [01;34mPubliczny[0m/              
+Co_robiłem_c5.md          [01;34mmaterialy_do_sprawozdan[0m/  [01;34mPulpit[0m/                 
+[01;34mDesktop[0m/                  microsoft.gpg             [01;34mSzablony[0m/               
+[01;34mDocuments[0m/                [01;34mMusic[0m/                    [01;34mTemplates[0m/              
+[01;34mDokumenty[0m/                [01;34mMuzyka[0m/                   [01;34mVideos[0m/                 
+[01;34mDownloads[0m/                [01;34mObrazy[0m/                   [01;34mVirtualBox\ VMs[0m/        
+historiaC5L1              [01;34mPictures[0m/                 [01;34mWideo[0m/                  
+[01;34mkatalogSMB[0m/               [01;34mPobrane[0m/                  [01;34mWINDOWS[0m/                
+[J[01;34mkreacjaMaszyn[0m/            [J[01;34mPublic[0m/                   [J[01;34mWWW[0m/                    [J[9A[0m[27m[24m[8C[32mvim[39m [90m/etc/exports[39m[K[12D[39m[4mk[24m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [11D[4mk[4ma[24m[4ma[4mt[24m[4mt[4ma[24m[4ma[4mlogSMB[1m[4m/[0m[24m[11D[24mk[24ma[24mt[24ma[24ml[24mo[24mg[24mS[24mM[24mB[0m[24m/plik1.txt[?1l>[?2004l
+[J]2;vim katalogSMB/plik1.txt]1;vim[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;24r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[24;1H"katalogSMB/plik1.txt" [Nowy Plik][>c[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H0,0-1    Wszystko[1;1H[?12l[?25h[27m[23m[m[H[2J[?25l[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H0,0-1    Wszystko"katalogSMB/plik1.txt" [Nowy Plik][1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[24;1H[1m-- WPROWADZANIE --[m[24;19H[K[24;63H0,1      Wszystko[1;1H[?12l[?25h[?25lT[24;63H1,2[1;2H[?12l[?25h[?25le[24;65H3[1;3H[?12l[?25h[?25ln[24;65H4[1;4H[?12l[?25h[?25l[24;65H5[1;5H[?12l[?25h[?25lt[24;65H6[1;6H[?12l[?25h[?25le[24;65H7[1;7H[?12l[?25h[?25lk[24;65H8[1;8H[?12l[?25h[?25ls[24;65H9[1;9H[?12l[?25h[?25lt[24;65H10[1;10H[?12l[?25h[?25l[24;66H1[1;11H[?12l[?25h[?25lb[24;66H2[1;12H[?12l[?25h[?25lę[24;66H4-13[1;13H[?12l[?25h[?25ld[24;66H5-14[1;14H[?12l[?25h[?25lz[24;66H6-15[1;15H[?12l[?25h[?25li[24;66H7-16[1;16H[?12l[?25h[?25le[24;66H8-17[1;17H[?12l[?25h[?25l[24;66H9-18[1;18H[?12l[?25h[?25ld[24;65H20-19[1;19H[?12l[?25h[?25ls[24;66H1-20[1;20H[?12l[?25h[?25lo[24;66H2-21[1;21H[?12l[?25h[?25lt[24;66H3-22[1;22H[?12l[?25h[?25l[1;21H[K[24;66H2-21[1;21H[?12l[?25h[?25l[1;20H[K[24;66H1-20[1;20H[?12l[?25h[?25l[1;19H[K[24;66H0-19[1;19H[?12l[?25h[?25lo[24;66H1-20[1;20H[?12l[?25h[?25ls[24;66H2-21[1;21H[?12l[?25h[?25lt[24;66H3-22[1;22H[?12l[?25h[?25le[24;66H4-23[1;23H[?12l[?25h[?25lp[24;66H5-24[1;24H[?12l[?25h[?25l[1;23H[K[24;66H4-23[1;23H[?12l[?25h[?25l[1;22H[K[24;66H3-22[1;22H[?12l[?25h[?25le[24;66H4-23[1;23H[?12l[?25h[?25lp[24;66H5-24[1;24H[?12l[?25h[?25l[1;23H[K[24;66H4-23[1;23H[?12l[?25h[?25l[1;22H[K[24;66H3-22[1;22H[?12l[?25h[?25lę[24;66H5-23[1;23H[?12l[?25h[?25lp[24;66H6-24[1;24H[?12l[?25h[?25ln[24;66H7-25[1;25H[?12l[?25h[?25ly[24;66H8-26[1;26H[?12l[?25h[?25l[24;66H9-27[1;27H[?12l[?25h[?25lz[24;65H30-28[1;28H[?12l[?25h[?25l[24;66H1-29[1;29H[?12l[?25h[?25li[24;66H2-30[1;30H[?12l[?25h[?25ln[24;66H3-31[1;31H[?12l[?25h[?25ln[24;66H4-32[1;32H[?12l[?25h[?25ly[24;66H5-33[1;33H[?12l[?25h[?25lc[24;66H6-34[1;34H[?12l[?25h[?25lh[24;66H7-35[1;35H[?12l[?25h[?25l[24;66H8-36[1;36H[?12l[?25h[?25lm[24;66H9-37[1;37H[?12l[?25h[?25la[24;65H40-38[1;38H[?12l[?25h[?25ls[24;66H1-39[1;39H[?12l[?25h[?25lz[24;66H2-40[1;40H[?12l[?25h[?25ly[24;66H3-41[1;41H[?12l[?25h[?25ln[24;66H4-42[1;42H[?12l[?25h[24;1H[K[1;41H[?25l[24;63H1,43-41  Wszystko[1;41H[?12l[?25h[?25l[24;1H"katalogSMB/plik1.txt"[24;63H[K[24;24H[Nowy] 1L, 44C zapisano
+[?1l>[?12l[?25h[?1049l[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[H[2J[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[32ml[39m[90ms[39m[32ml[32ms[39m [90mkreacjaMaszyn[39m[13D[39m[7m[4m/[39m[7m[4me[39m[7m[4mt[39m[7m[4mc[39m[7m[4m/[39m[7m[4ms[39m[7m[4ma[39m[7m[4mm[39m[7m[4mb[39m[7m[4ma[39m[7m[4m/[39m[7m[4ms[39m[7m[4mm[7m[4mb.conf[27m[24m[19D[27m[4m/[27m[4me[27m[4mt[27m[4mc[27m[4m/[27m[4ms[27m[4ma[27m[4mm[27m[4mb[27m[4ma[27m[4m/[27m[4ms[27m[4mm[27m[4mb[27m[4m.[27m[4mc[27m[4mo[27m[4mn[27m[4mf[24m[?1l>[?2004l
+]2;ls --color=tty /etc/samba/smb.conf]1;ls/etc/samba/smb.conf
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[1m[31me[0m[39m[90mcho "Utworzenie katalogu do udostępnienia"[39m[42D[1m[31me[1m[31mc[0m[39m[1m[31me[1m[31mc[1m[31mh[0m[39m[0m[32me[0m[32mc[0m[32mh[32mo[39m[39m [33m"[39m[33m"[33mE[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [36D[33mE[33md[39m[33md[33my[39m[33my[33mc[39m[33mc[33mj[39m[33mj[33ma[39m[33ma[33m [39m[33m [33mp[39m[33mp[33ml[39m[33ml[33mi[39m[33mi[33mk[39m[33mk[33mu[39m[33mu[33m [39m[33m [33mk[39m[33mk[33mo[39m[33mo[33mn[39m[33mn[33mf[39m[33mf[33mi[39m[33mi[33mg[39m[33mg[33mu[39m[33mu[33mr[39m[33mr[33ma[39m[33ma[33mc[39m[33mc[33my[39m[33my[33mj[39m[33mj[33mn[39m[33mn[33me[39m[33me[33mg[39m[33mg[33mo[39m[33mo[33m"[39m[?1l>[?2004l
+]2;echo "Edycja pliku konfiguracyjnego"]1;echoEdycja pliku konfiguracyjnego
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[1m[31mv[0m[39m[90mim katalogSMB/plik1.txt[39m[23D[0m[32mv[32mi[39m[32mv[32mi[32mm[39m[39m [39m![39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [19D[34m![34m$[39m[39m![39m [90mk[90matalogSMB/plik1.txt[39m[20D[39m![39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [19D[34m![34m$[39m[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m vim "Edycja pliku konfiguracyjnego"[K[?1h=[?2004h[35D[32mv[32mi[32mm[39m [33m"[33mE[33md[33my[33mc[33mj[33ma[33m [33mp[33ml[33mi[33mk[33mu[33m [33mk[33mo[33mn[33mf[33mi[33mg[33mu[33mr[33ma[33mc[33my[33mj[33mn[33me[33mg[33mo[33m"[39m[33mo[39m[39m [33mg[39m[39m [33me[39m[39m [33mn[39m[39m [33mj[39m[39m [33my[39m[39m [33mc[39m[39m [33ma[39m[39m [33mr[39m[39m [33mu[39m[39m [33mg[39m[39m [33mi[39m[39m [33mf[39m[39m [33mn[39m[39m [33mo[39m[39m [33mk[39m[39m [33m [39m[39m [33mu[39m[39m [33mk[39m[39m [33mi[39m[39m [33ml[39m[39m [33mp[39m[39m [33m [39m[39m [33ma[39m[39m [33mj[39m[39m [33mc[39m[39m [33my[39m[39m [33md[39m[39m [33mE[39m[39m [33m"[39m[39m [90mk[90matalogSMB/plik1.txt[39m[20D[39m![39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [19D[34m![34m$[39m[34m$[34m2[39m[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m vim "Edycja pliku konfiguracyjnego"2[K[?1h=[?2004h[36D[32mv[32mi[32mm[39m [33m"[33mE[33md[33my[33mc[33mj[33ma[33m [33mp[33ml[33mi[33mk[33mu[33m [33mk[33mo[33mn[33mf[33mi[33mg[33mu[33mr[33ma[33mc[33my[33mj[33mn[33me[33mg[33mo[33m"[39m[1C [33mo[39m[39m [33mg[39m[39m [33me[39m[39m [33mn[39m[39m [33mj[39m[39m [33my[39m[39m [33mc[39m[39m [33ma[39m[39m [33mr[39m[39m [33mu[39m[39m [33mg[39m[39m [33mi[39m[39m [33mf[39m[39m [33mn[39m[39m [33mo[39m[39m [33mk[39m[39m [33m [39m[39m [33mu[39m[39m [33mk[39m[39m [33mi[39m[39m [33ml[39m[39m [33mp[39m[39m [33m [39m[39m [33ma[39m[39m [33mj[39m[39m [33mc[39m[39m [33my[39m[39m [33md[39m[39m [33mE[39m[39m [33m"[39m[39m [90mk[90matalogSMB/plik1.txt[39m[20D[39m[7m[4m/[39m[7m[4me[39m[7m[4mt[39m[7m[4mc[39m[7m[4m/[39m[7m[4ms[39m[7m[4ma[39m[7m[4mm[39m[7m[4mb[39m[7m[4ma[39m[7m[4m/[39m[7m[4ms[39m[7m[4mm[39m[7m[4mb[39m[7m[4m.[39m[7m[4mc[39m[7m[4mo[39m[7m[4mn[39m[7m[4mf[27m[24m[39m [19D[27m[4m/[27m[4me[27m[4mt[27m[4mc[27m[4m/[27m[4ms[27m[4ma[27m[4mm[27m[4mb[27m[4ma[27m[4m/[27m[4ms[27m[4mm[27m[4mb[27m[4m.[27m[4mc[27m[4mo[27m[4mn[27m[4mf[24m[?1l>[?2004l
+]2;vim /etc/samba/smb.conf]1;vim[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;24r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[24;1H"/etc/samba/smb.conf" [tylko odczyt] 260L, 9542C[>c[27m[23m[m[H[2J[1;1H[96m#
+# Sample configuration file for the Samba suite for Debian GNU/Linux.
+#
+#
+# This is the main Samba configuration file. You should read the
+# smb.conf(5) manual page in order to understand the options listed
+# here. Samba has a huge number of configurable options most of which 
+# are not shown in this example
+#
+# Some options that are often worth tuning have been included as
+# commented-out examples in this file.
+#  - When such options are commented with ";", the proposed setting
+#    differs from the default Samba behaviour
+#  - When commented with "#", the proposed setting is the default
+#    behaviour of Samba but the option is considered important
+#    enough to be mentioned here
+#
+# NOTE: Whenever you modify this file you should run the command
+# "testparm" to check that you have not made any basic syntactic 
+# errors. 
+
+#======================= Global Settings =======================[m[24;63H1,1[10CGóra"/etc/samba/smb.conf" [tylko odczyt] 260L, 9542C[14C   [10C    [1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[24;63H2,1[10CGóra[2;1H[?12l[?25h[?25l[24;63H3[3;1H[?12l[?25h[?25l[24;63H4[4;1H[?12l[?25h[?25l[24;63H5[5;1H[?12l[?25h[?25l[24;63H6[6;1H[?12l[?25h[?25l[24;63H7[7;1H[?12l[?25h[?25l[24;63H8[8;1H[?12l[?25h[?25l[24;63H9[9;1H[?12l[?25h[?25l[24;63H10,1[10;1H[?12l[?25h[?25l[24;64H1[11;1H[?12l[?25h[?25l[24;64H2[12;1H[?12l[?25h[?25l[24;64H3[13;1H[?12l[?25h[?25l[24;64H4[14;1H[?12l[?25h[?25l[24;64H5[15;1H[?12l[?25h[?25l[24;64H6[16;1H[?12l[?25h[?25l[24;64H7[17;1H[?12l[?25h[?25l[24;64H8[18;1H[?12l[?25h[?25l[24;64H9[19;1H[?12l[?25h[?25l[24;63H20[20;1H[?12l[?25h[?25l[24;64H1,0-1[21;1H[?12l[?25h[?25l[24;64H2,1  [22;1H[?12l[?25h[?25l[24;64H3,0-1[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[93m[46m[[m[93mglobal[m[93m[46m][m[24;1H[K[24;63H24,1[11C0%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[22;1H[93m[global][m[24;63H[K[24;63H25,0-1[9C0%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m## Browsing/Identification ###[m[24;63H[K[24;63H26,1[11C1%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H27,0-1[9C1%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Change this to the workgroup/NT-domain name your Samba server will part of[m[24;63H[K[24;63H28,1[11C2%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mworkgroup[m = WORKGROUP[24;63H[K[24;63H29,1[11C2%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H30,0-1[9C2%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# server string is the equivalent of the NT Description field[m[24;63H[K[24;63H31,1[11C3%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9H[38;5;121mserver[m [38;5;121mstring[m = [38;5;81m%h[m server (Samba, Ubuntu)[24;63H[K[24;63H32,1-8[9C3%[23;8H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H33,0-1[9C4%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Windows Internet Name Serving Support Section:[m[24;63H[K[24;63H34,1[11C4%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# WINS Support - Tells the NMBD component of Samba to enable its WINS Server[m[24;63H[K[24;63H35,1[11C5%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m#   wins support = no[m[24;63H[K[24;63H36,1[11C5%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H37,0-1[9C5%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# WINS Server - Tells the NMBD components of Samba to be a WINS Client[m[24;63H[K[24;63H38,1[11C6%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Note: Samba can be either a WINS Server, or a WINS Client, but NOT both[m[24;63H[K[24;63H39,1[11C6%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   wins server = w.x.y.z[m[24;63H[K[24;63H40,1[11C7%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H41,0-1[9C7%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# This will prevent nmbd to search for NetBIOS names through DNS.[m[24;63H[K[24;63H42,1[11C8%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mdns[m [38;5;121mproxy[m = [95mno[m[24;63H[K[24;63H43,1[11C8%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H44,0-1[9C8%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m#### Networking ####[m[24;63H[K[24;63H45,1[11C9%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H46,0-1[9C9%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# The specific set of interfaces / networks to bind to[m[24;63H[K[24;63H47,1[10C10%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# This can be either the interface name or an IP address/netmask;[m[24;63H[K[24;63H48,1[10C10%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# interface names are normally preferred[m[24;63H[K[24;63H49,1[10C10%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   interfaces = 127.0.0.0/8 eth0[m[24;63H[K[24;63H50,1[10C11%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H51,0-1[8C11%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Only bind to the named interfaces and/or networks; you must use the[m[24;63H[K[24;63H52,1[10C12%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# 'interfaces' option above to use this.[m[24;63H[K[24;63H53,1[10C12%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# It is recommended that you enable this feature if your Samba machine is[m[24;63H[K[24;63H54,1[10C13%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# not protected by a firewall or is a firewall itself.  However, this[m[24;63H[K[24;63H55,1[10C13%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# option cannot handle dynamic or non-broadcast interfaces correctly.[m[24;63H[K[24;63H56,1[10C13%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   bind interfaces only = yes[m[24;63H[K[24;63H57,1[10C14%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H58,0-1[8C14%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H59,0-1[8C15%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H60,0-1[8C15%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m#### Debugging/Accounting ####[m[24;63H[K[24;63H61,1[10C16%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H62,0-1[8C16%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# This tells Samba to use a separate log file for each machine[m[24;63H[K[24;63H63,1[10C16%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# that connects[m[24;63H[K[24;63H64,1[10C17%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mlog[m [38;5;121mfile[m = /var/log/samba/log.[38;5;81m%m[m[24;63H[K[24;63H65,1[10C17%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H66,0-1[8C18%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Cap the size of the individual log files (in KiB).[m[24;63H[K[24;63H67,1[10C18%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mmax[m [38;5;121mlog[m [38;5;121msize[m = 1000[24;63H[K[24;63H68,1[10C18%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H69,0-1[8C19%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# If you want Samba to only log through syslog then set the following[m[24;63H[K[24;63H70,1[10C19%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# parameter to 'yes'.[m[24;63H[K[24;63H71,1[10C20%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m#   syslog only = no[m[24;63H[K[24;63H72,1[10C20%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H73,0-1[8C21%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# We want Samba to log a minimum amount of information to syslog. Everything[m[24;63H[K[24;63H74,1[10C21%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# should go to /var/log/samba/log.{smbd,nmbd} instead. If you want to log[m[24;63H[K[24;63H75,1[10C21%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# through syslog you should set the following parameter to something higher.[m[24;63H[K[24;63H76,1[10C22%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121msyslog[m = 0[24;63H[K[24;63H77,1[10C22%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H78,0-1[8C23%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Do something sensible when Samba crashes: mail the admin a backtrace[m[24;63H[K[24;63H79,1[10C23%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mpanic[m [38;5;121maction[m = /usr/share/samba/panic-action [38;5;81m%d[m[24;63H[K[24;63H80,1[10C24%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H81,0-1[8C24%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H82,0-1[8C24%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m####### Authentication #######[m[24;63H[K[24;63H83,1[10C25%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H84,0-1[8C25%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Server role. Defines in which mode Samba will operate. Possible[m[24;63H[K[24;63H85,1[10C26%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# values are "standalone server", "member server", "classic primary[m[24;63H[K[24;63H86,1[10C26%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# domain controller", "classic backup domain controller", "active[m[24;63H[K[24;63H87,1[10C27%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# directory domain controller". [m[24;63H[K[24;63H88,1[10C27%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m#[m[24;63H[K[24;63H89,1[10C27%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Most people will want "standalone sever" or "member server".[m[24;63H[K[24;63H90,1[10C28%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Running as "active directory domain controller" will require first[m[24;63H[K[24;63H91,1[10C28%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# running "samba-tool domain provision" to wipe databases and create a[m[24;63H[K[24;63H92,1[10C29%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# new domain.[m[24;63H[K[24;63H93,1[10C29%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mserver[m role = standalone server[24;63H[K[24;63H94,1[10C29%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H95,0-1[8C30%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# If you are using encrypted passwords, Samba will need to know what[m[24;63H[K[24;63H96,1[10C30%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# password database type you are using.  [m[24;63H[K[24;63H97,1[10C31%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mpassdb[m [38;5;121mbackend[m = tdbsam[24;63H[K[24;63H98,1[10C31%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H99,0-1[8C32%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mobey[m [38;5;121mpam[m [38;5;121mrestrictions[m = [95myes[m[24;63H[K[24;63H100,1[9C32%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H101,0-1[7C32%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# This boolean parameter controls whether Samba attempts to sync the Unix[m[24;63H[K[24;63H102,1[9C33%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# password with the SMB password when the encrypted SMB password in the[m[24;63H[K[24;63H103,1[9C33%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# passdb is changed.[m[24;63H[K[24;63H104,1[9C34%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121munix[m [38;5;121mpassword[m [38;5;121msync[m = [95myes[m[24;63H[K[24;63H105,1[9C34%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H106,0-1[7C35%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# For Unix password sync to work on a Debian GNU/Linux system, the following[m[24;63H[K[24;63H107,1[9C35%[23;1H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;1H[96m# parameters must be set (thanks to Ian Kahan <<kahan@informatik.tu-muenchen.de>>[23;1H for[m[24;63H[K[24;63H108,1[9C36%[22;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# sending the correct chat script for the passwd program in Debian Sarge).[m[24;63H[K[24;63H109,1[9C36%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mpasswd[m [38;5;121mprogram[m = /usr/bin/passwd [38;5;81m%u[m[24;63H[K[24;63H110,1[9C36%[23;1H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;4H[38;5;121mpasswd[m [38;5;121mchat[m = *Enter\snew\s*\spassword:* [38;5;81m%n[m\n *Retype\snew\s*\spassword:* [38;5;81m%n[m\\[23;1Hn *password\supdated\ssuccessfully* .[24;63H[K[24;63H111,1[9C37%[22;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H112,0-1[7C38%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# This boolean controls whether PAM will be used for password changes[m[24;63H[K[24;63H113,1[9C38%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# when requested by an SMB client instead of the program listed in[m[24;63H[K[24;63H114,1[9C38%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# 'passwd program'. The default is 'no'.[m[24;63H[K[24;63H115,1[9C39%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mpam[m [38;5;121mpassword[m [38;5;121mchange[m = [95myes[m[24;63H[K[24;63H116,1[9C39%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H117,0-1[7C40%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# This option controls how unsuccessful authentication attempts are mapped[m[24;63H[K[24;63H118,1[9C40%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# to anonymous connections[m[24;63H[K[24;63H119,1[9C41%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mmap[m [38;5;121mto[m [38;5;121mguest[m = bad user[24;63H[K[24;63H120,1[9C41%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H121,0-1[7C41%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m########## Domains ###########[m[24;63H[K[24;63H122,1[9C42%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H123,0-1[7C42%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m#[m[24;63H[K[24;63H124,1[9C43%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# The following settings only takes effect if 'server role = primary[m[24;63H[K[24;63H125,1[9C43%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# classic domain controller', 'server role = backup domain controller'[m[24;63H[K[24;63H126,1[9C43%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# or 'domain logons' is set [m[24;63H[K[24;63H127,1[9C44%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m#[m[24;63H[K[24;63H128,1[9C44%[23;1H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[23;1H[96m# It specifies the location of the user's[m[24;63H[K[24;63H129,0-1[7C45%[22;1H[?12l[?25h[?25l[24;64H30,1  [23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# profile directory from the client point of view) The following[m[24;63H[K[24;63H131,1[9C45%[23;1H[?12l[?25h[?25l[24;65H0[22;1H[?12l[?25h[?25l[24;64H29,0-1[21;1H[?12l[?25h[?25l[24;65H8,1  [20;1H[?12l[?25h[?25l[24;65H7[19;1H[?12l[?25h[?25l[24;65H6[18;1H[?12l[?25h[?25l[24;65H5[17;1H[?12l[?25h[?25l[24;65H4[16;1H[?12l[?25h[?25l[24;65H3,0-1[15;1H[?12l[?25h[?25l[24;65H2,1  [14;1H[?12l[?25h[?25l[24;65H1,0-1[13;1H[?12l[?25h[?25l[24;65H0,1  [12;1H[?12l[?25h[?25l[24;64H19[11;1H[?12l[?25h[?25l[24;65H8[10;1H[?12l[?25h[?25l[24;65H7,0-1[9;1H[?12l[?25h[?25l[24;65H6,1  [8;1H[?12l[?25h[?25l[24;65H5[7;1H[?12l[?25h[?25l[24;65H4[6;1H[?12l[?25h[?25l[24;65H3[5;1H[?12l[?25h[?25l[24;65H2,0-1[4;1H[?12l[?25h[?25l[24;65H1,1  [2;1H[?12l[?25h[?25l[24;65H0[1;1H[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[96m# sending the correct chat script for the passwd program in Debian Sarge).[m[24;63H[K[24;63H109,1[9C45%[1;1H[?12l[?25h[?25l[1;23r[1;1H[2L[1;24r[1;1H[96m# parameters must be set (thanks to Ian Kahan <<kahan@informatik.tu-muenchen.de>>[2;1H for[m[24;63H[K[24;63H108,1[9C44%[1;1H[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[96m# For Unix password sync to work on a Debian GNU/Linux system, the following[m[24;63H[K[24;63H107,1[9C44%[1;1H[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[24;63H[K[24;63H106,0-1[7C43%[1;1H[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;4H[38;5;121munix[m [38;5;121mpassword[m [38;5;121msync[m = [95myes[m[24;63H[K[24;63H105,1[9C43%[1;1H[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[96m# passdb is changed.[m[24;63H[K[24;63H104,1[9C43%[1;1H[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[96m# password with the SMB password when the encrypted SMB password in the[m[24;63H[K[24;63H103,1[9C42%[1;1H[?12l[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[96m# This boolean parameter controls whether Samba attempts to sync the Unix[m[24;63H[K[24;63H102,1[9C42%[1;1H[?12l[?25h[?25l[24;65H3[2;1H[?12l[?25h[?25l[24;65H4[3;1H[?12l[?25h[?25l[24;65H5[4;1H[?12l[?25h[?25l[24;65H6,0-1[5;1H[?12l[?25h[?25l[24;65H7,1  [6;1H[?12l[?25h[?25l[24;65H8[7;1H[?12l[?25h[?25l[24;65H9[9;1H[?12l[?25h[?25l[24;64H10[10;1H[?12l[?25h[?25l[24;65H1[11;1H[?12l[?25h[?25l[24;65H2,0-1[13;1H[?12l[?25h[?25l[24;65H3,1  [14;1H[?12l[?25h[?25l[24;65H4[15;1H[?12l[?25h[?25l[24;65H5[16;1H[?12l[?25h[?25l[24;65H6[17;1H[?12l[?25h[?25l[24;65H7,0-1[18;1H[?12l[?25h[?25l[24;65H8,1  [19;1H[?12l[?25h[?25l[24;65H9[20;1H[?12l[?25h[?25l[24;64H20[21;1H[?12l[?25h[?25l[24;65H1,0-1[22;1H[?12l[?25h[?25l[24;65H2,1  [23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H123,0-1[7C42%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m#[m[24;63H[K[24;63H124,1[9C43%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# The following settings only takes effect if 'server role = primary[m[24;63H[K[24;63H125,1[9C43%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# classic domain controller', 'server role = backup domain controller'[m[24;63H[K[24;63H126,1[9C43%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# or 'domain logons' is set [m[24;63H[K[24;63H127,1[9C44%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m#[m[24;63H[K[24;63H128,1[9C44%[23;1H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[23;1H[96m# It specifies the location of the user's[m[24;63H[K[24;63H129,0-1[7C45%[22;1H[?12l[?25h[?25l[24;64H30,1  [23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# profile directory from the client point of view) The following[m[24;63H[K[24;63H131,1[9C45%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# required a [profiles] share to be setup on the samba server (see[m[24;63H[K[24;63H132,1[9C46%[23;1H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;1H[96m# below)
+;   logon path = \\%N\profiles\%U[m[24;63H[K[24;63H133,1[9C46%[22;1H[?12l[?25h[?25l[24;65H4[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Another common choice is storing the profile in the user's home directory[m[24;63H[K[24;63H135,1[9C47%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# (this is Samba's default)[m[24;63H[K[24;63H136,1[9C47%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m#   logon path = \\%N\%U\profile[m[24;63H[K[24;63H137,1[9C48%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H138,0-1[7C48%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# The following setting only takes effect if 'domain logons' is set[m[24;63H[K[24;63H139,1[9C48%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# It specifies the location of a user's home directory (from the client[m[24;63H[K[24;63H140,1[9C49%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# point of view)[m[24;63H[K[24;63H141,1[9C49%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   logon drive = H:[m[24;63H[K[24;63H142,1[9C50%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m#   logon home = \\%N\%U[m[24;63H[K[24;63H143,1[9C50%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H144,0-1[7C51%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# The following setting only takes effect if 'domain logons' is set[m[24;63H[K[24;63H145,1[9C51%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# It specifies the script to run during logon. The script must be stored[m[24;63H[K[24;63H146,1[9C51%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# in the [netlogon] share[m[24;63H[K[24;63H147,1[9C52%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# NOTE: Must be store in 'DOS' file format convention[m[24;63H[K[24;63H148,1[9C52%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   logon script = logon.cmd[m[24;63H[K[24;63H149,1[9C53%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H150,0-1[7C53%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# This allows Unix users to be created on the domain controller via the SAMR[m[24;63H[K[24;63H151,1[9C54%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# RPC pipe.  The example command creates a user account with a disabled Unix[m[24;63H[K[24;63H152,1[9C54%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# password; please adapt to your needs[m[24;63H[K[24;63H153,1[9C54%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m; add user script = /usr/sbin/adduser --quiet --disabled-password --gecos "" %u[m[24;63H[K[24;63H154,1[9C55%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H155,0-1[7C55%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# This allows machine accounts to be created on the domain controller via the [m[24;63H[K[24;63H156,1[9C56%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# SAMR RPC pipe.  [m[24;63H[K[24;63H157,1[9C56%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# The following assumes a "machines" group exists on the system[m[24;63H[K[24;63H158,1[9C56%[23;1H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;1H[96m; add machine script  = /usr/sbin/useradd -g machines -c "%u machine account" -dd[23;1H /var/lib/samba -s /bin/false %u[m[24;63H[K[24;63H159,1[9C57%[22;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H160,0-1[7C57%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# This allows Unix groups to be created on the domain controller via the SAMR[m[24;63H[K[24;63H161,1[9C58%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# RPC pipe.  [m[24;63H[K[24;63H162,1[9C58%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m; add group script = /usr/sbin/addgroup --force-badname %g[m[24;63H[K[24;63H163,1[9C59%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H164,0-1[7C59%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m############ Misc ############[m[24;63H[K[24;63H165,1[9C60%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H166,0-1[7C60%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Using the following line enables you to customise your configuration[m[24;63H[K[24;63H167,1[9C60%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# on a per machine basis. The %m gets replaced with the netbios name[m[24;63H[K[24;63H168,1[9C61%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# of the machine that is connecting[m[24;63H[K[24;63H169,1[9C61%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   include = /home/samba/etc/smb.conf.%m[m[24;63H[K[24;63H170,1[9C62%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H171,0-1[7C62%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Some defaults for winbind (make sure you're not using the ranges[m[24;63H[K[24;63H172,1[9C63%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# for something else.)[m[24;63H[K[24;63H173,1[9C63%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   idmap uid = 10000-20000[m[24;63H[K[24;63H174,1[9C63%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   idmap gid = 10000-20000[m[24;63H[K[24;63H175,1[9C64%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   template shell = /bin/bash[m[24;63H[K[24;63H176,1[9C64%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H177,0-1[7C65%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Setup usershare options to enable non-root users to share folders[m[24;63H[K[24;63H178,1[9C65%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# with the net usershare command.[m[24;63H[K[24;63H179,1[9C65%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H180,0-1[7C66%[23;1H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;1H[96m# Maximum number of usershare. 0 (default) means that usershare is disabled.
+;   usershare max shares = 100[m[24;63H[K[24;63H181,1[9C67%[22;1H[?12l[?25h[?25l[24;65H2[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H183,0-1[7C67%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Allow users who've been granted usershare privileges to create[m[24;63H[K[24;63H184,1[9C67%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# public shares, not just authenticated ones[m[24;63H[K[24;63H185,1[9C68%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4Husershare [38;5;121mallow[m guests = [95myes[m[24;63H[K[24;63H186,1[9C68%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H187,0-1[7C69%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m#======================= Share Definitions =======================[m[24;63H[K[24;63H188,1[9C69%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H189,0-1[7C70%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Un-comment the following (and tweak the other settings below to suit)[m[24;63H[K[24;63H190,1[9C70%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# to enable the default home directory shares. This will share each[m[24;63H[K[24;63H191,1[9C70%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# user's home directory as \\server\username[m[24;63H[K[24;63H192,1[9C71%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;[homes][m[24;63H[K[24;63H193,1[9C71%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   comment = Home Directories[m[24;63H[K[24;63H194,1[9C72%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   browseable = no[m[24;63H[K[24;63H195,1[9C72%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H196,0-1[7C72%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# By default, the home directories are exported read-only. Change the[m[24;63H[K[24;63H197,1[9C73%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# next parameter to 'no' if you want to be able to write to them.[m[24;63H[K[24;63H198,1[9C73%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   read only = yes[m[24;63H[K[24;63H199,1[9C74%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H200,0-1[7C74%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# File creation mask is set to 0700 for security reasons. If you want to[m[24;63H[K[24;63H201,1[9C75%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# create files with group=rw permissions, set next parameter to 0775.[m[24;63H[K[24;63H202,1[9C75%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   create mask = 0700[m[24;63H[K[24;63H203,1[9C75%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H204,0-1[7C76%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Directory creation mask is set to 0700 for security reasons. If you want to[m[24;63H[K[24;63H205,1[9C76%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# create dirs. with group=rw permissions, set next parameter to 0775.[m[24;63H[K[24;63H206,1[9C77%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   directory mask = 0700[m[24;63H[K[24;63H207,1[9C77%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H208,0-1[7C78%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# By default, \\server\username shares can be connected to by anyone[m[24;63H[K[24;63H209,1[9C78%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# with access to the samba server.[m[24;63H[K[24;63H210,1[9C78%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Un-comment the following parameter to make sure that only "username"[m[24;63H[K[24;63H211,1[9C79%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# can connect to \\server\username[m[24;63H[K[24;63H212,1[9C79%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# This might need tweaking when using external authentication schemes[m[24;63H[K[24;63H213,1[9C80%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   valid users = %S[m[24;63H[K[24;63H214,1[9C80%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H215,0-1[7C81%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Un-comment the following and create the netlogon directory for Domain Logons[m[24;63H[K[24;63H216,1[9C81%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# (you need to configure Samba to act as a domain controller too.)[m[24;63H[K[24;63H217,1[9C81%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;[netlogon][m[24;63H[K[24;63H218,1[9C82%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   comment = Network Logon Service[m[24;63H[K[24;63H219,1[9C82%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   path = /home/samba/netlogon[m[24;63H[K[24;63H220,1[9C83%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   guest ok = yes[m[24;63H[K[24;63H221,1[9C83%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   read only = yes[m[24;63H[K[24;63H222,1[9C83%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H223,0-1[7C84%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Un-comment the following and create the profiles directory to store[m[24;63H[K[24;63H224,1[9C84%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# users profiles (see the "logon path" option above)[m[24;63H[K[24;63H225,1[9C85%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# (you need to configure Samba to act as a domain controller too.)[m[24;63H[K[24;63H226,1[9C85%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# The path below should be writable by all users so that their[m[24;63H[K[24;63H227,1[9C86%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# profile directory may be created the first time they log on[m[24;63H[K[24;63H228,1[9C86%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;[profiles][m[24;63H[K[24;63H229,1[9C86%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   comment = Users profiles[m[24;63H[K[24;63H230,1[9C87%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   path = /home/samba/profiles[m[24;63H[K[24;63H231,1[9C87%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   guest ok = no[m[24;63H[K[24;63H232,1[9C88%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   browseable = no[m[24;63H[K[24;63H233,1[9C88%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   create mask = 0600[m[24;63H[K[24;63H234,1[9C89%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   directory mask = 0700[m[24;63H[K[24;63H235,1[9C89%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H236,0-1[7C89%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[93m[46m[[m[93mprinters[m[93m[46m][m[24;63H[K[24;63H237,1[9C90%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[22;1H[93m[[8C][m
+   [38;5;121mcomment[m = All Printers[24;63H[K[24;63H238,1[9C90%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mbrowseable[m = [95mno[m[24;63H[K[24;63H239,1[9C91%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mpath[m = /var/spool/samba[24;63H[K[24;63H240,1[9C91%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mprintable[m = [95myes[m[24;63H[K[24;63H241,1[9C91%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mguest[m [38;5;121mok[m = [95mno[m[24;63H[K[24;63H242,1[9C92%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mread[m [38;5;121monly[m = [95myes[m[24;63H[K[24;63H243,1[9C92%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mcreate[m [38;5;121mmask[m = 0700[24;63H[K[24;63H244,1[9C93%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H245,0-1[7C93%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Windows clients look for this share name as a source of downloadable[m[24;63H[K[24;63H246,1[9C94%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# printer drivers[m[24;63H[K[24;63H247,1[9C94%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[93m[46m[[m[93mprint$[m[93m[46m][m[24;63H[K[24;63H248,1[9C94%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[22;1H[93m[print$][m
+   [38;5;121mcomment[m = Printer Drivers[24;63H[K[24;63H249,1[9C95%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mpath[m = /var/lib/samba/printers[24;63H[K[24;63H250,1[9C95%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mbrowseable[m = [95myes[m[24;63H[K[24;63H251,1[9C96%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mread[m [38;5;121monly[m = [95myes[m[24;63H[K[24;63H252,1[9C96%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H[38;5;121mguest[m [38;5;121mok[m = [95mno[m[24;63H[K[24;63H253,1[9C97%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Uncomment to allow remote administration of Windows print drivers.[m[24;63H[K[24;63H254,1[9C97%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# You may need to replace 'lpadmin' with the name of the group your[m[24;63H[K[24;63H255,1[9C97%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# admin users are members of.[m[24;63H[K[24;63H256,1[9C98%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# Please note that you also need to set appropriate Unix permissions[m[24;63H[K[24;63H257,1[9C98%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m# to the drivers directory for these users to have write rights in it[m[24;63H[K[24;63H258,1[9C99%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[96m;   write list = root, @lpadmin[m[24;63H[K[24;63H259,1[9C99%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H260,0-1[7CDół[23;1H[?12l[?25h[?25l
+[1m-- WPROWADZANIE --[m[24;63H[K[24;63H260,1[9CDół[24;20H[38;5;224mW10: OSTRZEŻENIE: Zmiany w pliku tylko do odczytu[m[24;77H[K[24;1H
+[38;5;121mNaciśnij ENTER lub wprowadź komendę aby kontynuować[?12l[?25h[m[1;1H[L[?25l[1;4H[38;5;121mbrowseable[m = [95mno[m
+   [38;5;121mpath[m = /var/spool/samba[3;5H[38;5;121mrintable[m = [95myes[m[3;19H[K[4;4H[38;5;121mgues[m[1C [38;5;121mok[m = [95mno[m[4;17H[K[5;4H[38;5;121mread[m [38;5;121monly[m = [95myes[m
+   [38;5;121mcreate[m [38;5;121mmask[m = 0700[7;4H[K[8;1H[96m# Windows clients look for this share name as a source of downloadable
+# printer driver[m[9;18H[K[10;1H[93m[print$][m[10;9H[K[11;1H   [38;5;121mcomment[m = Printer Drivers
+   [38;5;121mpath[m = /var/lib/samba/printers
+   [38;5;121mbrowseable[m = [95myes[m[13;20H[K[14;4H[38;5;121mread[m [38;5;121monly[m = [95myes[m[14;19H[K[15;4H[38;5;121mguest[m [38;5;121mok[m = [95mno[m[15;17H[K[16;1H[96m# Uncomment to allow remote administration of Windows print drivers.
+# You may need to replace 'lpadmin' with the name of the group your[m[17;68H[K[18;3H[96madmin users are members of.[m[18;30H[K[19;3H[96mPlease note that you also need to set appropriate Unix permissions
+# to the drivers directory for these users to have write rights in it
+;   write list = root, @lpadmin[m[21;32H[K[22;1H[K[24;20H[K[24;63H261,1[9CDół[23;1H[?12l[?25h[?25lI[24;67H2[23;2H[?12l[?25h[?25l[23;1H[K[24;67H1[23;1H[?12l[?25h[?25l[1;23r[1;1H[4M[1;24r[19;1H[93m[sambashare][m
+    [38;5;121mcomment[m = Samba on Ubuntu
+    [38;5;121mpath[m = /home/username/sambashare
+    [38;5;121mread[m [38;5;121monly[m = [95mno[m
+    [38;5;121mbrowsable[m = [95myes[m[24;63H[K[24;63H265,20[8CDół[23;20H[?12l[?25h[?25l[24;65H4,19[22;19H[?12l[?25h[?25l[24;65H3,20[21;20H[?12l[?25h[?25l[24;65H2[20;20H[?12l[?25h[?25l[19;1H[93m[46m[[10C][m[24;65H1,13[19;13H[?12l[?25h[?25l[93m[[10C][m[24;65H2[20;13H[?12l[?25h[?25l[24;68H4[20;14H[?12l[?25h[?25l[24;68H5[20;15H[?12l[?25h[?25l[24;68H6[20;16H[?12l[?25h[?25l[24;68H7[20;17H[?12l[?25h[?25l[24;68H8[20;18H[?12l[?25h[?25l[24;68H9[20;19H[?12l[?25h[?25l[24;67H20[20;20H[?12l[?25h[?25l[24;68H1[20;21H[?12l[?25h[?25l[24;68H2[20;22H[?12l[?25h[?25l[24;68H3[20;23H[?12l[?25h[?25l[24;68H4[20;24H[?12l[?25h[?25l[24;68H3[20;23H[?12l[?25h[?25l Ubuntu[20;29H[K[24;68H2[20;22H[?12l[?25h[?25l Ubuntu[20;28H[K[24;68H1[20;21H[?12l[?25h[?25ln Ubuntu[24;68H2[20;22H[?12l[?25h[?25la Ubuntu[24;68H3[20;23H[?12l[?25h[?25l[24;65H3[21;23H[?12l[?25h[?25lame/sambashare[21;36H[K[24;68H2[21;22H[?12l[?25h[?25l[24;68H3[21;23H[?12l[?25h[?25l[24;68H2[21;22H[?12l[?25h[?25l[24;68H1[21;21H[?12l[?25h[?25l[24;68H0[21;20H[?12l[?25h[?25l[24;67H19[21;19H[?12l[?25h[?25l[24;68H8[21;18H[?12l[?25h[?25l[24;68H7[21;17H[?12l[?25h[?25l[24;68H6[21;16H[?12l[?25h[?25l[24;68H5[21;15H[?12l[?25h[?25l[24;68H4[21;14H[?12l[?25h[?25l[24;68H3[21;13H[?12l[?25h[?25l[24;68H2[21;12H[?12l[?25h[24;1H[K[21;11H[?25l[24;63H263,11[8CDół[21;11H[?12l[?25h[?25l[24;68H2[21;12H[?12l[?25h[?25l
+
+
+[1m-- WIZUALNY --[m[24;63H[K[24;63H263,12[8CDół[21;12H[?12l[?25h[?25l[48;5;242m/home/userame/sambashar[m[24;67H35[21;35H[?12l[?25h[?25l[24;5H[1mPROWADZANIE --[m[24;63H[K[24;63H263,12[8CDół[21;12H[K[21;12H[?12l[?25h[?25lhome/username/sambashare[22;5H[K[23;5H[38;5;121mread[m [38;5;121monly[m = [95mno[m[23;19H[K[24;65H4,1 [8C99%[22;1H[?12l[?25h[?25l    [38;5;121mread[m [38;5;121monly[m = [95mno[m
+    [38;5;121mbrowsable[m = [95myes[m[24;65H3,36[8CDół[21;36H[?12l[?25h[?25l[21;35H[K[24;68H5[21;35H[?12l[?25h[?25l[21;34H[K[24;68H4[21;34H[?12l[?25h[?25l[21;33H[K[24;68H3[21;33H[?12l[?25h[?25l[21;32H[K[24;68H2[21;32H[?12l[?25h[?25l[21;31H[K[24;68H1[21;31H[?12l[?25h[?25l[21;30H[K[24;68H0[21;30H[?12l[?25h[?25l[21;29H[K[24;67H29[21;29H[?12l[?25h[?25l[21;28H[K[24;68H8[21;28H[?12l[?25h[?25l[21;27H[K[24;68H7[21;27H[?12l[?25h[?25l[21;26H[K[24;68H6[21;26H[?12l[?25h[?25l[21;25H[K[24;68H5[21;25H[?12l[?25h[?25l[21;24H[K[24;68H4[21;24H[?12l[?25h[?25l[21;23H[K[24;68H3[21;23H[?12l[?25h[?25l[21;22H[K[24;68H2[21;22H[?12l[?25h[?25l[21;21H[K[24;68H1[21;21H[?12l[?25h[?25l[21;20H[K[24;68H0[21;20H[?12l[?25h[?25l[21;19H[K[24;67H19[21;19H[?12l[?25h[?25l[21;18H[K[24;68H8[21;18H[?12l[?25h[?25l[21;17H[K[24;68H7[21;17H[?12l[?25h[?25l[21;16H[K[24;68H6[21;16H[?12l[?25h[?25l[21;15H[K[24;68H5[21;15H[?12l[?25h[?25l[21;14H[K[24;68H4[21;14H[?12l[?25h[?25l[21;13H[K[24;68H3[21;13H[?12l[?25h[?25l[21;12H[K[24;68H2[21;12H[?12l[?25h[?25l/home/stud/dabrowk1[24;67H31[21;31H[?12l[?25h[?25l/[24;68H2[21;32H[?12l[?25h[?25lk[24;68H3[21;33H[?12l[?25h[?25la[24;68H4[21;34H[?12l[?25h[?25lt[24;68H5[21;35H[?12l[?25h[?25la[24;68H6[21;36H[?12l[?25h[?25ll[24;68H7[21;37H[?12l[?25h[?25lo[24;68H8[21;38H[?12l[?25h[?25lg[24;68H9[21;39H[?12l[?25h[?25lS[24;67H40[21;40H[?12l[?25h[?25lM[24;68H1[21;41H[?12l[?25h[?25lB[24;68H2[21;42H[?12l[?25h[?25l[24;65H5,20[23;20H[?12l[?25h[?25lyesZ[24;68H1[23;21H[?12l[?25h[?25lZ[24;68H2[23;22H[?12l[?25h[?25l[23;21H[K[24;68H1[23;21H[?12l[?25h[?25l[95myes[m[23;20H[K[24;68H0[23;20H[?12l[?25h[24;1H[K[23;19H[?25l[24;63H265,19[8CDół[23;19H[?12l[?25h[?25l[24;65H4,18[22;18H[?12l[?25h[?25l[24;65H3,19[21;19H[?12l[?25h[?25l[24;65H2[20;19H[?12l[?25h[?25l[24;67H20[20;20H[?12l[?25h[?25l[24;68H1[20;21H[?12l[?25h[?25l[24;68H2[20;22H[?12l[?25h[?25l[24;68H3[20;23H[?12l[?25h[?25l[24;68H4[20;24H[?12l[?25h[?25l[24;68H5[20;25H[?12l[?25h[?25l[24;68H6[20;26H[?12l[?25h[?25l[24;68H7[20;27H[?12l[?25h[?25l[24;68H8[20;28H[?12l[?25h[?25l[24;68H9[20;29H[?12l[?25h[?25l[24;1H[1m-- WPROWADZANIE --[m[24;63H[K[24;63H262,30[8CDół[20;30H[?12l[?25h[?25l[24;68H1[20;31H[?12l[?25h[?25lS[24;68H2[20;32H[?12l[?25h[?25l6[24;68H3[20;33H[?12l[?25h[24;1H[K[20;32H[?25l[24;63H262,32[8CDół[20;32H[?12l[?25h[?25l[24;1H[97m[41mE45: opcja 'readonly' jest ustawiona (wymuś poprzez !)[m[24;63H[K[24;63H262,32[8CDół[20;32H[?12l[?25h[?25l[24;1H[K[24;1H:[?12l[?25hw[?25l[?12l[?25h![?25l[?12l[?25h[?25l"/etc/samba/smb.conf"
+[97m[41m"/etc/samba/smb.conf" E212: Nie mogę otworzyć pliku do zapisu[m
+[38;5;121mNaciśnij ENTER lub wprowadź komendę aby kontynuować[?12l[?25h[m[1;1H[2L[?25l[1;4H[38;5;121mread[m [38;5;121monly[m = [95myes[m
+   [38;5;121mcreate[m [38;5;121mmask[m = 0700[24;1H[K[24;63H262,32[8CDół[20;32H[?12l[?25h[?25l[24;65H3[21;32H[?12l[?25h[?25l[24;65H4,18[22;18H[?12l[?25h[?25l[24;65H5,19[23;19H[?12l[?25h[?25l[24;63H[K[24;1H:[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[1m[31ms[0m[39m[90mudo apt install samba[39m[21D[0m[32ms[32mu[39m[1m[31ms[1m[31mu[1m[31md[0m[39m[0m[4m[32ms[0m[4m[32mu[0m[4m[32md[4m[32mo[24m[39m[39m [1m[31m![0m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [16D[0m[34m![34m![39m[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m sudo vim /etc/samba/smb.conf[K[?1h=[?2004h[28D[4m[32ms[4m[32mu[4m[32md[4m[32mo[24m[39m [32mv[32mi[32mm[39m [4m/[4me[4mt[4mc[4m/[4ms[4ma[4mm[4mb[4ma[4m/[4ms[4mm[4mb[4m.[4mc[4mo[4mn[4mf[24m[?1l>[?2004l
+]2;sudo vim /etc/samba/smb.conf]1;vim[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;24r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[24;1H"/etc/samba/smb.conf" 260L, 9542C[>c[1;1H[34m#
+# Sample configuration file for the Samba suite for Debian GNU/Linux.
+#
+#
+# This is the main Samba configuration file. You should read the
+# smb.conf(5) manual page in order to understand the options listed
+# here. Samba has a huge number of configurable options most of which 
+# are not shown in this example
+#
+# Some options that are often worth tuning have been included as
+# commented-out examples in this file.
+#  - When such options are commented with ";", the proposed setting
+#    differs from the default Samba behaviour
+#  - When commented with "#", the proposed setting is the default
+#    behaviour of Samba but the option is considered important
+#    enough to be mentioned here
+#
+# NOTE: Whenever you modify this file you should run the command
+# "testparm" to check that you have not made any basic syntactic 
+# errors. 
+
+#======================= Global Settings =======================[m[24;63H1,1[10CGóra[1;1H[?12l[?25h[27m[23m[m[H[2J[?25l[1;1H[96m#
+# Sample configuration file for the Samba suite for Debian GNU/Linux.
+#
+#
+# This is the main Samba configuration file. You should read the
+# smb.conf(5) manual page in order to understand the options listed
+# here. Samba has a huge number of configurable options most of which 
+# are not shown in this example
+#
+# Some options that are often worth tuning have been included as
+# commented-out examples in this file.
+#  - When such options are commented with ";", the proposed setting
+#    differs from the default Samba behaviour
+#  - When commented with "#", the proposed setting is the default
+#    behaviour of Samba but the option is considered important
+#    enough to be mentioned here
+#
+# NOTE: Whenever you modify this file you should run the command
+# "testparm" to check that you have not made any basic syntactic 
+# errors. 
+
+#======================= Global Settings =======================[m[24;63H1,1[10CGóra"/etc/samba/smb.conf" 260L, 9542C[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[27m[23m[m[H[2J[1;4H[38;5;121mcomment[m = All Printers
+   [38;5;121mbrowseable[m = [95mno[m
+   [38;5;121mpath[m = /var/spool/samba
+   [38;5;121mprintable[m = [95myes[m
+   [38;5;121mguest[m [38;5;121mok[m = [95mno[m
+   [38;5;121mread[m [38;5;121monly[m = [95myes[m
+   [38;5;121mcreate[m [38;5;121mmask[m = 0700
+
+[96m# Windows clients look for this share name as a source of downloadable
+# printer drivers[m
+[93m[print$][m
+   [38;5;121mcomment[m = Printer Drivers
+   [38;5;121mpath[m = /var/lib/samba/printers
+   [38;5;121mbrowseable[m = [95myes[m
+   [38;5;121mread[m [38;5;121monly[m = [95myes[m
+   [38;5;121mguest[m [38;5;121mok[m = [95mno[m
+[96m# Uncomment to allow remote administration of Windows print drivers.
+# You may need to replace 'lpadmin' with the name of the group your
+# admin users are members of.
+# Please note that you also need to set appropriate Unix permissions
+# to the drivers directory for these users to have write rights in it
+;   write list = root, @lpadmin[m[24;63H260,0-1[7CDół[23;1H[?12l[?25h[?25l
+[1m-- WPROWADZANIE --[m[24;63H[K[24;63H260,1[9CDół[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H261,1[9CDół[23;1H[?12l[?25h[?25l[1;23r[1;1H[5M[1;24r[18;1H[93m[sambashare][m
+    [38;5;121mcomment[m = Samba na Ubuntu S6
+    [38;5;121mpath[m = /home/stud/dabrowk1/katalogSMB
+    [38;5;121mread[m [38;5;121monly[m = [95mno[m
+    [38;5;121mbrowsable[m = [95myes[m[24;63H[K[24;63H266,1[9CDół[23;1H[?12l[?25h[24;1H[K[23;1H[?25l[24;63H266,0-1[7CDół[23;1H[?12l[?25h[?25l
+"/etc/samba/smb.conf"[24;63H[K[24;23H266L, 9670C zapisano
+[?1l>[?12l[?25h[?1049l[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[1m[31me[0m[39m[90mcho "Edycja pliku konfiguracyjnego"[39m[35D[1m[31me[1m[31mc[0m[39m[1m[31me[0m[39m[0m[90mc[0m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [36D[7m[4m[32msudo[24m[39m[7m [7m[32mservice[39m[7m smbd restart[27m[25D[27m[4m[32ms[27m[4m[32mu[27m[4m[32md[27m[4m[32mo[24m[39m[27m [27m[32ms[27m[32me[27m[32mr[27m[32mv[27m[32mi[27m[32mc[27m[32me[39m[27m [27ms[27mm[27mb[27md[27m [27mr[27me[27ms[27mt[27ma[27mr[27mt[?1l>[?2004l
+]2;sudo service smbd restart]1;service[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[1m[31ms[0m[39m[90mudo service smbd restart[39m[24D[0m[32ms[32mu[39m[1m[31ms[1m[31mu[1m[31md[0m[39m[0m[4m[32ms[0m[4m[32mu[0m[4m[32md[4m[32mo[24m[39m[39m [1m[31ms[0m[39m[1m[31ms[1m[31my[0m[39m[90ms[90mt[90me[90mm[90mc[90mt[90ml[90m [90ms[90mt[90ma[90mt[90mu[90ms[90m [90mN[90me[90mt[90mworkManager.service[39m[37D[1m[31my[1m[31ms[0m[39m[1m[31ms[1m[31mt[0m[39m[1m[31mt[1m[31me[0m[39m[1m[31me[1m[31mm[0m[39m[1m[31mm[1m[31mc[0m[39m[1m[31mc[1m[31mt[0m[39m[8D[0m[32ms[0m[32my[0m[32ms[0m[32mt[0m[32me[0m[32mm[0m[32mc[0m[32mt[32ml[39m[39m [39ms[39mt[39ma[39mt[39mu[39ms[39m [39ms[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [21Dmbd[?1l>[?2004l
+]2;sudo systemctl status smbd]1;systemctl[?1h=[0;1;32m●[0m smbd.service - LSB: start Samba SMB/CIFS daemon (smbd)[m
+   Loaded: loaded (/etc/init.d/smbd; bad; vendor preset: enabled)[m
+   Active: [0;1;32mactive (running)[0m since pon 2019-05-27 17:05:10 CEST; 11s ago[m
+     Docs: man:systemd-sysv-generator(8)[m
+  Process: 12793 ExecStop=/etc/init.d/smbd stop (code=exited, status=0/SUCCESS)[m
+  Process: 12806 ExecStart=/etc/init.d/smbd start (code=exited, status=0/SUCCESS[m
+    Tasks: 3 (limit: 512)[m
+   CGroup: /system.slice/smbd.service[m
+           ├─12825 /usr/sbin/smbd -D[m
+           ├─12826 /usr/sbin/smbd -D[m
+           └─12829 /usr/sbin/smbd -D[m
+[m
+maj 27 17:05:10 s6 systemd[1]: Starting LSB: start Samba SMB/CIFS daemon (smbd).[m
+maj 27 17:05:10 s6 smbd[12806]:  * Starting SMB/CIFS daemon smbd[m
+maj 27 17:05:10 s6 smbd[12806]:    ...done.[m
+maj 27 17:05:10 s6 systemd[1]: Started LSB: start Samba SMB/CIFS daemon (smbd).[m
+[7mlines 1-16/16 (END)[27m[K[K[?1l>[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[7m[4m[32msudo[24m[39m[7m [7m[32msmbpasswd[39m[7m -a username[27m[26D[27m[4m[32ms[27m[4m[32mu[27m[4m[32md[27m[4m[32mo[24m[39m[27m [27m[32ms[27m[32mm[27m[32mb[27m[32mp[27m[32ma[27m[32ms[27m[32ms[27m[32mw[27m[32md[39m[27m [27m-[27ma[27m [27mu[27ms[27me[27mr[27mn[27ma[27mm[27me        dabrowk1[?1l>[?2004l
+]2;sudo smbpasswd -a dabrowk1]1;smbpasswdNew SMB password:
+Retype new SMB password:
+Added user dabrowk1.
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[1m[31me[0m[39m[90mcho "Edycja pliku konfiguracyjnego"[39m[35D[1m[31me[1m[31mc[0m[39m[1m[31me[1m[31mc[1m[31mh[0m[39m[0m[32me[0m[32mc[0m[32mh[32mo[39m[39m [39mt[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [30D[90m"[90mEdycja pliku konfiguracyjnego"[39m[31D[33m"[39m[33m"[33mt[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [29D[33mt[33me[39m[33mt[39m[39m [33m"[39m[90mE[90mdycja pliku konfiguracyjnego"[39m[30D[90m"[39m[39m[4mT[24m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [30D[4mT[4me[24m[24mT[24meraz powinnoy   o n      foldr er powinien [4mb[24m[24mbyc  ć wyeksportowany[?1l>[?2004l
+]2;echo Teraz folder powinien być wyeksportowany]1;echoTeraz folder powinien być wyeksportowany
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[H[2J[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[4mm[24m[90mv publicznyKatalog katalogSMB[39m[29D[24m[1m[31mm[1m[31mk[0m[39m[90md[90mi[90mr[90m [90mp[90mu[90mb[90ml[90mi[90mc[90mz[90mn[90my[90mK[90ma[90mt[90ma[90ml[90mo[90mg[39m[39m [39m [39m [39m [39m [39m [39m [39m [28D[0m[39m[4mm[24m[0m[90mv[39m[3P[16C[90mg[90m katalogSMB[39m[29D[24m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [30D[4mm[24m[90mv publicznyKatalog katalogSMB[39m[29D[24m[1m[31mm[1m[31mk[0m[39m[90md[90mi[90mr[90m [90mp[90mu[90mb[90ml[90mi[90mc[90mz[90mn[90my[90mK[90ma[90mt[90ma[90ml[90mo[90mg[39m[39m [39m [39m [39m [39m [39m [39m [39m [28D[1m[31mm[1m[31mk[1m[31md[0m[39m[1m[31md[1m[31mi[0m[39m[0m[32mm[0m[32mk[0m[32md[0m[32mi[32mr[39m[39m [39m[4mm[24m[90ma[90mt[90me[90mr[90mi[90ma[90ml[90my[90m_[90md[90mo[90m_[90ms[90mp[90mr[90mawozdan/c4[39m[25D[24mm[39mo[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [24DuntPoint        [4mm[24m[90ma[90mterialy_do_sprawozdan/c4[39m[25D[24m[90mp[90mu[90mb[90ml[90mi[90mc[90mz[90mn[90my[90mK[90ma[90mt[90ma[90ml[90mo[90mg[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [26D[39mo[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [15Du [90mp[90mublicznyKatalog[39m[16D[39mp[39mu[39mn[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [13DktMontowania        ntowania   nia[?1l>[?2004l
+]2;mkdir punktMontowania]1;mkdir[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[1m[31ms[0m[39m[90mudo smbpasswd -a dabrowk1[39m[25D[0m[32ms[32mw[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [24D[1m[31ms[1m[31mw[1m[31mh[0m[39m[1m[31mh[1m[31mo[0m[39m[1m[31mh[0m[39m[0m[39m [0m[32ms[0m[32mw[39m[0m[39m [1m[31ms[0m[39m[90mu[90mdo smbpasswd -a dabrowk1[39m[25D[0m[32ms[32mh[39m[90mo[90mw[90mm[90mo[90mu[90mn[90mt[90m [90m-[90me[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [24D[1m[31ms[1m[31mh[1m[31mo[0m[39m[1m[31mo[1m[31mw[0m[39m[0m[32ms[0m[32mh[0m[32mo[0m[32mw[32mm[32mo[32mu[32mn[32mt[39m[39m [39m-[39me[?1l>[?2004l
+]2;showmount -e]1;showmountExport list for s6:
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[7m[4m[32msudo[24m[39m[7m [7m[32m/etc/init.d/samba[39m[7m reload[27m[29D[27m[4m[32ms[27m[4m[32mu[27m[4m[32md[27m[4m[32mo[24m[39m[27m [27m[32m/[27m[32me[27m[32mt[27m[32mc[27m[32m/[27m[32mi[27m[32mn[27m[32mi[27m[32mt[27m[32m.[27m[32md[27m[32m/[27m[32ms[27m[32ma[27m[32mm[27m[32mb[27m[32ma[39m[27m [27mr[27me[27ml[27mo[27ma[27md[?1l>[?2004l
+]2;sudo /etc/init.d/samba reload]1;/etc/init.d/samba[....] Reloading smbd configuration (via systemctl): smbd.service[?25l7[1G[[32m ok [39;49m8[?12l[?25h.
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[4m[32msudo[24m[39m [32m/etc/init.d/samba[39m reload[29D[24m[32ms[24m[32mh[24m[32mo[24m[32mw[32mm[32mo[32mu[32mn[32mt[39m[39m [39m-[39me[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m        [17D[?1l>[?2004l
+]2;showmount -e]1;showmountExport list for s6:
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[32mshowmount[39m -e [90m-t smb[39m[39m-[90m-[39m[39m [39m [39m [39m [39m [39m [90me[39m[90m-[90m [9D[1m[31ms[1m[31mh[1m[31mo[1m[31mw[1m[31mm[1m[31mo[1m[31mu[1m[31mn[0m[39m[90mt[1m[31mu[0m[39m[0m[90mn[1m[31mo[0m[39m[0m[90mu[1m[31mm[0m[39m[0m[90mo[1m[31mw[0m[39m[0m[90mm[1m[31mo[0m[39m[0m[90mw[0m[32ms[0m[32mh[39m[0m[90mo[1m[31ms[0m[39m[90mh[0m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [12D[1m[31ms[0m[39m[90mhowmount -e[39m[11D[1m[31ms[1m[31mm[0m[39m[90mb[90md[39m[39m [39m [39m [39m [39m [39m [39m [39m [10D[1m[31ms[1m[31mm[1m[31mb[0m[39m[1m[31mb[1m[31mc[0m[39m[90mlient -L ldap[39m[13D[0m[32ms[0m[32mm[0m[32mb[0m[32mc[32ml[32mi[32me[32mn[32mt[39m[39m [39m-[39mL[39m [39ml[39md[39ma[39mp[90mp[39m[90ma[39m[4ml[24m[90md[24m[90ml[90m [90mL[90m-[90m [39m[39m [39m [39m [39m [39m [39m [39m [39m [8D[?1l>[?2004l
+]2;smbclient]1;smbclientWARNING: The "syslog" option is deprecated
+Usage: smbclient [-?EgBVNkPeC] [-?|--help] [--usage]
+        [-R|--name-resolve=NAME-RESOLVE-ORDER] [-M|--message=HOST]
+        [-I|--ip-address=IP] [-E|--stderr] [-L|--list=HOST]
+        [-m|--max-protocol=LEVEL] [-T|--tar=<c|x>IXFqgbNan]
+        [-D|--directory=DIR] [-c|--command=STRING] [-b|--send-buffer=BYTES]
+        [-t|--timeout=SECONDS] [-p|--port=PORT] [-g|--grepable]
+        [-B|--browse] [-d|--debuglevel=DEBUGLEVEL]
+        [-s|--configfile=CONFIGFILE] [-l|--log-basename=LOGFILEBASE]
+        [-V|--version] [--option=name=value]
+        [-O|--socket-options=SOCKETOPTIONS] [-n|--netbiosname=NETBIOSNAME]
+        [-W|--workgroup=WORKGROUP] [-i|--scope=SCOPE] [-U|--user=USERNAME]
+        [-N|--no-pass] [-k|--kerberos] [-A|--authentication-file=FILE]
+        [-S|--signing=on|off|required] [-P|--machine-pass] [-e|--encrypt]
+        [-C|--use-ccache] [--pw-nt-hash] service <password>
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;31m➜  [36m~[00m [K[?1h=[?2004h[32msmbclient[39m [90m-L ldap[39m[39m-[39mL[39m [39ms[39m [39m [39m 6[?1l>[?2004l
+]2;smbclient -L s6]1;smbclientWARNING: The "syslog" option is deprecated
+Enter dabrowk1's password: 
+Domain=[WORKGROUP] OS=[Windows 6.1] Server=[Samba 4.3.11-Ubuntu]
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	sambashare      Disk      Samba na Ubuntu S6
+	IPC$            IPC       IPC Service (s6 server (Samba, Ubuntu))
+	SK102           Printer   HP LaserJet M402dn
+Domain=[WORKGROUP] OS=[Windows 6.1] Server=[Samba 4.3.11-Ubuntu]
+
+	Server               Comment
+	---------            -------
+	S6                   s6 server (Samba, Ubuntu)
+	UBUNTU               ubuntu server (Samba, Ubuntu)
+
+	Workgroup            Master
+	---------            -------
+	WORKGROUP            UBUNTU
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[1m[31ms[0m[39m[90mmbclient -L s6[39m[14D[0m[32ms[32mh[39m[90mo[90mw[90mm[90mo[90mu[4C[90me[39m[39m [39m [39m [13D[1m[31ms[1m[31mh[1m[31mi[0m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [9D[1m[31mi[1m[31mw[0m[39m[1m[31mi[0m[39m[0m[39m [0m[32ms[0m[32mh[39m[0m[90mo[90mwmount -e[39m[10D[1m[31ms[1m[31mh[1m[31mh[0m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [9D[0m[32ms[0m[32mh[39m[0m[90mo[90mwmount -e[39m[10D[32ms[32mh[32mo[32mw[32mm[32mo[32mu[32mn[32mt[39m[39m [39m-[39me [90m-t smb[39m[1m[31m}[0m[39m[39m [39m [39m [39m [39m [0m[90m-[90mt smb[39m[39m|[39m [39m [39m [39m [39m  [32mg[39m[32mg[32mr[39m[1m[31mg[1m[31mr[1m[31mp[0m[39m[1m[31mp[1m[31me[0m[39m [1m[31mp[0m[39m[0m[39m [0m[32mg[0m[32mr[39m[0m[39m [1m[31mg[1m[31mr[1m[31me[0m[39m[0m[32mg[0m[32mr[0m[32me[32mp[39m nfs[?1l>[?2004l
+]2;showmount -e | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} nfs]1;showmount[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;31m➜  [36m~[00m [K[?1h=[?2004h[32mshowmount[39m -e | [32mgrep[39m nfs[90ms[39m[90mf[90mn[90m [1m[31mg[1m[31mr[1m[31me[0m[39m[90mp[0m[32mg[0m[32mr[39m[0m[90me[32mg[39m[90mr[90mg[90m [90m|[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [10D[?1l>[?2004l
+]2;showmount -e]1;showmountExport list for s6:
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[H[2J[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[4mm[24m[90mkdir punktMontowania[39m[20D[24m[1m[31mm[1m[31mo[0m[39m[90mu[90mn[90mt[90m [90m|[90m [90mg[90mr[90me[90mp[90m [90mn[90mf[90ms[39m[39m [39m [39m [39m [39m [19D[1m[31mm[1m[31mo[1m[31mu[0m[39m[1m[31mu[1m[31mn[0m[39m[0m[32mm[0m[32mo[0m[32mu[0m[32mn[32mt[39m[39m [39m-[90mu[90m [90md[90ma[90mb[90mr[90mo[90mw[90mk[90m1 //volt/ tmp[39m[22D[39mt[90m [90mc[90mi[90mf[90ms[90m [90m-[90mo[90m [90mu[90ms[90mr[90m=[90md[90ma[90mb[90mr[90mo[90mw[90mk[90m1[90m //stud.iem.pw.edu.pl/dabrowki tmp[39m[55D[39m [39mc[39mi[39mf[39ms[39m [39m-[39mo[39m [39mu[39ms[39mr[39m=[39md[39ma[39mb[39mr[39mo[39mw[39mk[39m1[39m [39m/[39m/[39ms[39mt[39mu[39md[39m.[39mi[39me[39mm[39m.[39mp[39mw[39m.[39me[39md[39mu[39m.[39mp[39ml[39m/[39md[39ma[39mb[39mr[39mo[39mw[39mk[39mi[39m [39mt[39mm[39mp[90mp[39m[90mm[90mt[90m [90mi[90mk[90mw[90mo[90mr[90mb[90ma[90md[90m/[90ml[90mp[90m.[90mu[90md[90me[90m.[90mw[90mp[90m.[90mm[90me[90mi[90m.[90md[90mu[39m[4m/[4m/[4ms[24m[90mt[39m[4m/[24m[24m[90ms[39m[4m/[24m[24m[90m/[24m[90m/[90m [39m[39m [39m[4m/[24m[4m/[39m[4m/[24m[4m/[39m[4ml[24m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [30D[24m/[24m/[24mloca  calko  host/[42D[39mm[39mo[39mu[39mn[39mt[37C[42D[32mm[32mo[32mu[32mn[32mt[39m[37C[7mkatalogSMB[27m[10D[27mk[27ma[27mt[27ma[27ml[27mo[27mg[27mS[27mM[27mB [4m/[24m[24m [4mp[24m[4mp[4mu[24m[4mu[4mn[24m[4mn[4mktMontowania[1m[4m/[0m[24m[4ma[24m[0m[24m [?1l>[?2004l
+]2;mount -t cifs -o usr=dabrowk1 //localhost/katalogSMB punktMontowania]1;mountmount: only root can use "--options" option
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;31m➜  [36m~[00m [K[?1h=[?2004h[1m[31ms[0m[39m[90mhowmount -e[39m[11D[0m[32ms[32mu[39m[90md[90mo[90m [90m/[90me[90mt[90mc[90m/[90mi[90mn[90mit.d/samba reload[39m[27D[1m[31ms[1m[31mu[1m[31md[0m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [25D[90mo[90m /etc/init.d/samba reload[39m[26D[0m[4m[32ms[0m[4m[32mu[0m[4m[32md[4m[32mo[24m[39m[39m [1m[31m![0m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [23D[0m[34m![34m![39m[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;31m➜  [36m~[00m sudo mount -t cifs -o usr=dabrowk1 //localhost/katalogSMB punktMontowania[K[?1h=[?2004h[A[7C[4m[32ms[4m[32mu[4m[32md[4m[32mo[24m[39m [32mm[32mo[32mu[32mn[32mt[39m[48C[4mp[4mu[4mn[4mk[4mt[4mM[4mo[4mn[4mt[4mo[4mw[4ma[4mn[4mi[4ma[24m[?1l>[?2004l
+]2;sudo mount -t cifs -o usr=dabrowk1 //localhost/katalogSMB punktMontowania]1;mount[0;1;39mPassword for root@//localhost/katalogSMB:  [0m[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;31m➜  [36m~[00m [K[?1h=[?2004h[4m[32msudo[24m[39m [32mmount[39m -t cifs -o usr=dabrowk1 //localhost/katalogSMB [4mpunktMontowani[4ma[24m[K[A[7C[K[1B[K[A[8C[4m[32msudo[24m[39m [32mmount[39m -t cifs -o usr=dabrowk1 //localhost/katalogSMB [4mpunktMontowani[4ma[24m[K[A[7C[5P[67C[4ma[24m[K[1B[K[A[76C[?1l>[?2004l[1B]2;mount -t cifs -o usr=dabrowk1 //localhost/katalogSMB punktMontowania]1;mountmount: only root can use "--options" option
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;31m➜  [36m~[00m [K[?1h=[?2004h[32mmount[39m -t cifs -o usr=dabrowk1 //localhost/katalogSMB [4mpunktMontowania[24mer=dabrowk1 //localhost/katalogSMB[24m [4mp[4mu[4mn[4mk[4mt[4mM[4mo[4mn[4mt[4mo[4mw[4ma[4mn[4mi[4ma[24m[49D[?1l>[?2004l
+]2;mount -t cifs -o user=dabrowk1 //localhost/katalogSMB punktMontowania]1;mountmount: only root can use "--options" option
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;31m➜  [36m~[00m [K[?1h=[?2004h[32mmount[39m -t cifs -o user=dabrowk1 //localhost/katalogSMB [4mpunktMontowania[24m[1C[P[39C [40D[P[39C [40D[P[39C [40D[P[39C [40D[P[39C [40D[P[39C [40D[P[39C [40D[P[39C [40D[P[39C [40D[P[39C [40D[P[39C [40D[P[39C [40D[P[39C [40D/[P[37C [40D[P[39C [40D[P[39C [40D[?1l>[?2004l
+]2;mount -t cifs //localhost/katalogSMB punktMontowania]1;mountmount: only root can use "--types" option
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;31m➜  [36m~[00m [K[?1h=[?2004h[32mmount[39m -t cifs //localhost/katalogSMB [4mpunktMontowania[24m[39m [32mm[32mo[32mu[32mn[32mt[39m -t cifs //localhost/katalogSMB[24m [4mp[4mu[4mn[4mk[4mt[4mM[4mo[4mn[4mt[4mo[4mw[4ma[4mn[4mi[4ma[24m[52D[P[14C-o user=dabrowk1 //loca[24ml[24mh[24mo[24ms[24mt[24m/[24mk[24ma[24mt[24ma[24ml[24mo[24mg[24mS[24mMB [4mpunktMontowania[24m[50D[P[49C [68D[4m[32ms[4m[32mu[4m[32md[4m[32mo[24m[39m[39m [32mm[32mo[32mu[32mn[32mt[39m -t cifs -o usr=dabrowk1 //localhost/katalo[24mg[24mS[24mM[24mB[24m [4mp[4mu[4mn[4mk[4mt[4mM[4mo[4mn[4mt[4mo[4mwani[4ma[24m[K[A[79Cer=dabrowk1 //localhost/katalogSMB[24m [4mp[4mu[4mn[4mk[4mt[4mM[4mo[4mn[4mt[4mo[4mw[4ma[4mn[4mi[4ma[24m[A[31C[?1l>[?2004l[1B
+]2;sudo mount -t cifs -o user=dabrowk1 //localhost/katalogSMB punktMontowania]1;mount[0;1;39mPassword for dabrowk1@//localhost/katalogSMB:  [0m***   ************
+Retrying with upper case share name
+mount error(6): No such device or address
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs)
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;31m➜  [36m~[00m [K[?1h=[?2004h[4m[32msudo[24m[39m [32mmount[39m -t cifs -o user=dabrowk1 //localhost/katalogSMB [4mpunktMontowan[4mi[4ma[24m[K[A[79C[P[25C[4mi[4ma[24m[24m [A[52C[P[26C[4ma[24m [K[A[52C[P[27C[K[1B[K[A[52C[P[27C [28D[P[27C [28D[P[27C [28D[P[27C [28D[P[27C [28D[P[27C [28Ds/katalogSMB[24m [4mp[4mu[4mn[4mk[4mt[4mM[4mo[4mn[4mt[4mo[4mw[4ma[4mn[4mi[4ma[24m[27D6/katalogSMB[24m [4mp[4mu[4mn[4mk[4mt[4mM[4mo[4mn[4mt[4mo[4mw[4ma[4mn[4mi[4ma[24m[27D[?1l>[?2004l[1B]2;sudo mount -t cifs -o user=dabrowk1 //s6/katalogSMB punktMontowania]1;mount[0;1;39mPassword for dabrowk1@//s6/katalogSMB:  [0m************
+Retrying with upper case share name
+mount error(6): No such device or address
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs)
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;31m➜  [36m~[00m [K[?1h=[?2004h[H[2J[0m[27m[24m[J[01;35ms6 [01;31m➜  [36m~[00m [K[4m[32msudo[24m[39m [32mmount[39m -t cifs -o user=dabrowk1 //s6/katalogSMB [4mpunktMontowania[24m[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[?1l>[?2004l
+]2;sudo mount -t cifs -o user=dabrowk1 //s6/katalogSMB punktMontowania]1;mount[0;1;39mPassword for dabrowk1@//s6/katalogSMB:  [0m************
+Retrying with upper case share name
+mount error(6): No such device or address
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs)
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;31m➜  [36m~[00m [K[?1h=[?2004h[1m[31ms[0m[39m[90mudo mount -t cifs -o user=dabrowk1 //s6/katalogSMB punktMontowania[39m[66D[0m[32ms[32mh[39m[90mo[90mw[90mm[90mo[90mu[90mn[90mt[90m [90m-[90me[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [65D[1m[31ms[1m[31mh[1m[31mo[0m[39m[1m[31mo[1m[31mw[0m[39m[0m[32ms[0m[32mh[0m[32mo[0m[32mw[32mm[32mo[32mu[32mn[32mt[39m[39m [39m-[39me[?1l>[?2004l
+]2;showmount -e]1;showmountExport list for s6:
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[32md[39m[90mf[39m[32md[32mf[39m [90m-h[39m[39m-[39mh[?1l>[?2004l
+]2;df -h]1;dfFilesystem       Size  Used Avail Use% Mounted on
+udev             3,8G     0  3,8G   0% /dev
+tmpfs            781M   12M  769M   2% /run
+/dev/shm         1,3G  1,2G   61M  96% /cdrom
+/dev/loop0       1,2G  1,2G     0 100% /rofs
+/cow             3,9G  833M  3,0G  22% /
+tmpfs            3,9G  6,6M  3,9G   1% /dev/shm
+tmpfs            5,0M  4,0K  5,0M   1% /run/lock
+tmpfs            3,9G     0  3,9G   0% /sys/fs/cgroup
+tmpfs            6,1G  4,8M  6,1G   1% /tmp
+ftp:/mnt/z2/pub  4,8T  1,7T  3,2T  35% /pub
+//vol/dabrowk1    68G   61G  1,9G  97% /home/stud/dabrowk1
+tmpfs            781M   68K  780M   1% /run/user/7415
+vol:/            125G  115G  832M 100% /net/vol
+ldap:/            59G   31G   29G  52% /net/ldap
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[H[2J[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[1m[31ms[0m[39m[90mhowmount -e[39m[11D[1m[31ms[1m[31mm[0m[39m[90mb[90mc[90ml[90mi[90me[4C[90mL[90m s6[39m[13D[1m[31ms[1m[31mm[1m[31mb[0m[39m[0m[32ms[0m[32mm[0m[32mb[32mc[32ml[32mi[32me[32mn[32mt[39m[39m [39m-[39mL[39m [39ms[39m6[?1l>[?2004l
+]2;smbclient -L s6]1;smbclientWARNING: The "syslog" option is deprecated
+Enter dabrowk1's password: 
+Domain=[WORKGROUP] OS=[Windows 6.1] Server=[Samba 4.3.11-Ubuntu]
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	sambashare      Disk      Samba na Ubuntu S6
+	IPC$            IPC       IPC Service (s6 server (Samba, Ubuntu))
+	SK102           Printer   HP LaserJet M402dn
+Domain=[WORKGROUP] OS=[Windows 6.1] Server=[Samba 4.3.11-Ubuntu]
+
+	Server               Comment
+	---------            -------
+	S6                   s6 server (Samba, Ubuntu)
+	UBUNTU               ubuntu server (Samba, Ubuntu)
+
+	Workgroup            Master
+	---------            -------
+	WORKGROUP            UBUNTU
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[32msmbclient[39m -L s6[15D[32md[32mf[39m[39m [39m-[39mh[39m [39m [39m [39m       [10D[32ms[32mh[32mo[32mw[32mm[32mount[39m -e[12D[4m[32ms[4m[32mu[4m[32md[4m[32mo[24m[39m[39m [32mm[32mo[32mu[32mn[32mt[39m -t cifs -o user=dabrowk1 //s6/katalogSMB [4mpunktMontowania[24m[14D[11D[10C[10D[10P[16C          [26D[7ms[24m[7ma[24m[7mm[24m[7mb[24m[7ma[24m[7ms[24m[7mh[24m[7ma[24m[7mr[24m[7me[27m[24m [4mp[4mu[4mn[4mk[4mt[4mMontowania[24m[16D[10D[27ms[27ma[27mm[27mb[27ma[27ms[27mh[27ma[27mr[27me[?1l>[?2004l
+]2;sudo mount -t cifs -o user=dabrowk1 //s6/sambashare punktMontowania]1;mount[0;1;39mPassword for dabrowk1@//s6/sambashare:  [0m************
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[32ml[39m[90ms katalogSMB[39m[12D[32ml[32ms[39m[39m [39m[4mp[24m[39m [39m [39m [39m [39m [39m [39m [39m [39m [9D[4mp[4mu[24m[4mu[4mn[24m[4mn[4mktMontowania[1m[4m/[0m[24m[4ma[24m[0m[24m [?1l>[?2004l
+]2;ls --color=tty punktMontowania]1;lsplik1.txt
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[1m[31me[0m[39m[90mcho Teraz folder powinien być wyeksportowany[39m[44D[1m[31me[1m[31mc[0m[39m[1m[31me[1m[31mc[1m[31mh[0m[39m[0m[32me[0m[32mc[0m[32mh[32mo[39m[39m [39mu[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39D[90mT[90meraz folder powinien być wyeksportowany[39m[40D[39mU[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39Ddało się zamontować[?1l>[?2004l
+]2;echo Udało się zamontować]1;echoUdało się zamontować
+[1m[7m%[27m[1m[0m                                                                                ]2;dabrowk1@s6: ~]1;~[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?1h=[?2004h[32m:[39m[1m[31m:[1m[31mD[0m[39m[0m[32m:[39m[0m[39m [39m [H[2J[0m[27m[24m[J[01;35ms6 [01;32m➜  [36m~[00m [K[?2004l
+
+Script done on pon, 27 maj 2019, 17:58:37

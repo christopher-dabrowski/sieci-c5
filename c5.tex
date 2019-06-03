@@ -1,0 +1,142 @@
+\documentclass{article} % Polska wersja klasy article
+
+\usepackage{polski} % Pozwala na użycie polskiego. Ustawia między innymi fontenc na T1
+\usepackage[utf8]{inputenc} % Informuje o kodowaniu
+\usepackage{textcomp} % Znaki specjalne takie jak ~
+\usepackage{xcolor} % Definicje kolorów
+
+\renewcommand{\labelitemi}{\textbullet} % Zmiana symbolu wliczeń
+
+\usepackage{graphicx}
+\graphicspath{ {./Obrazy/} }
+\usepackage{subcaption} % Subfigury
+\usepackage{float} % Pozycjonowanie figur
+\usepackage{mwe} % Tymczasowe grafiki
+
+\usepackage{listings} % Listingi kodu
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{gray},
+  keywordstyle=\color{blue}
+}
+
+\title{Laboratorium sieci komputerowych - c5 \\ Montowanie dysków sieciowych}
+\author{Krzysztof Dąbrowski gr. 3}
+\date{\today}
+
+\begin{document}
+\maketitle{}
+\tableofcontents{}
+%\newpage
+
+\section{Cel zajęć}
+Celem laboratorium c5 jest badanie udostępnionych dysków sieciowych i ich montowanie.
+Przerabiane jest również instalowanie i konfiguracja serwerów SMB i NFS.
+
+\section{Instalacja serwera SMB}
+Zainstalowałem serwer smb na stacji roboczej pod systemem Ubuntu.
+
+\begin{verbatim}
+  sudo apt install samba
+\end{verbatim}
+
+W celu sprawdzenie czy instalacja przebiegła pomyślnie skorzystałem z polecenia \texttt{whereis}.
+\begin{verbatim}
+  whereis samba
+
+  samba: /usr/sbin/samba /usr/lib/samba /etc/samba /usr/share/samba /usr/share/man/man7/samba.7.gz /usr/share/man/man8/samba.8.gz
+\end{verbatim}
+
+Utworzyłem katalog, który będę udostępniał poleceniem \texttt{mkdir publicznyKatalog} oraz umieściłem w nim plik tekstowy.
+
+\paragraph{Ustawienie konfiguracji} \mbox{} \\
+Do pliku konfiguracyjnego dodałem ustawienie udostępniające katalog.
+
+\begin{verbatim}
+  /etc/samba/smb.conf
+  .
+  .
+  .
+
+  [sambashare]
+    comment = Samba on Ubuntu
+    path = /home/username/sambashare
+    read only = no
+    browsable = yes
+\end{verbatim}
+
+\paragraph{Uruchomienie serwera SMB} \mbox{} \\
+Uruchomiłem serwer SMB poleceniem \texttt{sudo service smbd restart}
+
+By sprawdzić czy serwer działa wykonałem \texttt{sudo systemctl status smbd}
+\begin{verbatim}
+  sudo systemctl status smbd
+
+  smbd.service - LSB: start Samba SMB/CIFS daemon (smbd)
+   Loaded: loaded (/etc/init.d/smbd; bad; vendor preset: enabled)
+   Active: active (running) since pon 2019-05-27 17:05:10 CEST; 11s ago
+  ...
+\end{verbatim}
+
+Następnie ustawiłem hasło do zasobów serwera \texttt{sudo smbpasswd -a dabrowk1}
+
+By sprawdzić czy zasób jest udostępniany uruchomiłem \texttt{smbclient -L s6 }
+\begin{verbatim}
+  smbclient -L s6  
+
+  WARNING: The "syslog" option is deprecated
+  Enter dabrowk1's password: 
+  Domain=[WORKGROUP] OS=[Windows 6.1] Server=[Samba 4.3.11-Ubuntu]
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	sambashare      Disk      Samba na Ubuntu S6
+	IPC$            IPC       IPC Service (s6 server (Samba, Ubuntu))
+	SK102           Printer   HP LaserJet M402dn
+\end{verbatim}
+
+\subsection{Montowanie zasobu SMB}
+\paragraph{Ubuntu} \mbox{} \\
+Zamontowałem utworzony wcześniej zasób poleceniem \texttt{sudo mount -t cifs -o user=dabrowk1 //s6/sambashare punktMontowania}.
+
+By sprawdzić czy montowanie się powiodło wyświetliłem zawartość katalogu.
+\begin{verbatim}
+  ls punktMontowania 
+
+  plik1.txt
+\end{verbatim}
+
+\paragraph{Windows} \mbox{} \\
+Zbadałem jakie dyski są zamontowane poleceniem \texttt{net use}.
+\begin{verbatim}
+  PS H:\> net use
+  New connections will not be remembered.
+
+
+  Status       Local     Remote                    Network
+
+  -------------------------------------------------------------------------------
+  OK           H:        \\stud\dabrowk1           Microsoft Windows Network
+  The command completed successfully.
+\end{verbatim}
+Jedyny podłączony dysk to H
+
+Następnie montuję dysk poleceniem \texttt{net use Z: \\\\s6\\sambashare}.
+By sprawdzić czy dysk został zamontowany ponownie wywołałem \texttt{net use}.
+\begin{verbatim}
+  net use
+  New connections will not be remembered.
+
+
+  Status       Local     Remote                    Network
+
+  -------------------------------------------------------------------------------
+  OK           H:        \\stud\dabrowk1           Microsoft Windows Network
+  OK           Z:        \\s6\sambashare           Microsoft Windows Network
+  The command completed successfully.
+\end{verbatim}
+
+Po zakończonej pracy odmontowałem dysk poleceniem \texttt{net use Z: /delete}
+
+\end{document}

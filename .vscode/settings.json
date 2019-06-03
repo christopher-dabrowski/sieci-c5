@@ -1,0 +1,12 @@
+{
+    "spellright.language": [
+        "pl"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "git-commit",
+        "plaintext",
+        "shellscript"
+    ]
+}
