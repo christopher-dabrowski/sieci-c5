@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc} % Informuje o kodowaniu
 \usepackage{textcomp} % Znaki specjalne takie jak ~
 \usepackage{xcolor} % Definicje kolorów
+\usepackage{tcolorbox} % Ładne ramki
 
 \renewcommand{\labelitemi}{\textbullet} % Zmiana symbolu wliczeń
 
@@ -138,5 +139,75 @@ By sprawdzić czy dysk został zamontowany ponownie wywołałem \texttt{net use}
 \end{verbatim}
 
 Po zakończonej pracy odmontowałem dysk poleceniem \texttt{net use Z: /delete}
+
+\section{FreeBSD}
+Zadanie realizowałem na maszynie laboratoryjnej \texttt{se}.
+
+\subsection{Oglądanie eksportowanych zasobów}
+Sprawdziełem dyski SMB eksportuje serwer \texttt{volt} poleceniem \texttt{showmount}.
+
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=FreeBSD]
+  \begin{lstlisting}
+  showmount -e volt -t cifs
+  \end{lstlisting}
+  \tcblower
+  \tiny
+  \begin{lstlisting}
+    Exports list on volt:
+  /tmp/obj                           Everyone
+  /home/stud                         ldap fed.iem.pw.edu.pl ...
+  /                                  Everyone
+  /nfs                               lap
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
+
+\vspace{1cm}
+Oraz jakie dyski NFS eksportuje serwer \texttt{ldap}.
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=FreeBSD]
+  \begin{lstlisting}
+  showmount -e ldap -t nfs
+  \end{lstlisting}
+  \tcblower
+  \tiny
+  \begin{lstlisting}
+    Exports list on ldap:
+    /                                  Everyone
+    /nfs/arch2                         s2.iem.pw.edu.pl pxe.iem.pw.edu.pl k0.iem.pw.edu.pl  
+    /home/stud2                        Everyone
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
+
+\subsection{Montowanie udziałów}
+Utworzyłem katalog będący punktem montowania poleceniem \texttt{mkdir mountingPoint}.
+
+\subsection{SMB}
+\begin{verbatim}
+  root@se:~ # mount -t cifs -o user=dabrowk1 //volt/pub/ mountingPoint/mount: /volt/pub: Operation not supported by device 
+\end{verbatim}
+
+\subsection{NFS}
+Zamontowałem dysk poleceniem \texttt{mount -t nfs ldap:/ mountingPoint}. Następnie sprawdziłem czy dysk jest zamontowany poleceniem \texttt{df -h}.
+
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=FreeBSD]
+  \begin{lstlisting}
+  df -h
+  \end{lstlisting}
+  \tcblower
+  \tiny
+  \begin{lstlisting}
+    Filesystem    Size    Used   Avail Capacity  Mounted on
+    /dev/md0      274M    147M    105M    58%    /
+    devfs         1.0K    1.0K      0B   100%    /dev
+    tmpfs         2.3G     16K    2.3G     0%    /tmp
+    tmpfs         2.3G     12M    2.3G     1%    /var
+    ldap:/R        58G     30G     27G    53%    /net/ldap
+    ldap:/         58G     30G     27G    53%    /root/mountingPoint 
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
+
+Następnie odmontowałem dysk poleceniem \texttt{umount mountingPoint}.
 
 \end{document}
