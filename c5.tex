@@ -21,6 +21,8 @@
   keywordstyle=\color{blue}
 }
 
+\newcommand{\paragraphnl}[1]{\paragraph{#1} \mbox{} \\} % Paragraf z nową linią
+
 \title{Laboratorium sieci komputerowych - c5 \\ Montowanie dysków sieciowych}
 \author{Krzysztof Dąbrowski gr. 3}
 \date{\today}
@@ -35,7 +37,7 @@ Celem laboratorium c5 jest badanie udostępnionych dysków sieciowych i ich mont
 Przerabiane jest również instalowanie i konfiguracja serwerów SMB i NFS.
 
 \section{Instalacja serwera SMB}
-Zainstalowałem serwer smb na stacji roboczej pod systemem Ubuntu.
+Chciałem uruchomić mój własny serwer SMB. W tym celu zainstalowałem serwer smb na stacji roboczej pod systemem Ubuntu.
 
 \begin{verbatim}
   sudo apt install samba
@@ -53,8 +55,13 @@ Utworzyłem katalog, który będę udostępniał poleceniem \texttt{mkdir public
 \paragraph{Ustawienie konfiguracji} \mbox{} \\
 Do pliku konfiguracyjnego dodałem ustawienie udostępniające katalog.
 
-\begin{verbatim}
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=Konfiguracja serwera SMB]
+  \begin{lstlisting}
   /etc/samba/smb.conf
+  \end{lstlisting}
+  \tcblower
+  \footnotesize
+  \begin{lstlisting}
   .
   .
   .
@@ -63,8 +70,10 @@ Do pliku konfiguracyjnego dodałem ustawienie udostępniające katalog.
     comment = Samba on Ubuntu
     path = /home/username/sambashare
     read only = no
-    browsable = yes
-\end{verbatim}
+    browsable = yes 
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
 
 \paragraph{Uruchomienie serwera SMB} \mbox{} \\
 Uruchomiłem serwer SMB poleceniem \texttt{sudo service smbd restart}
@@ -81,7 +90,7 @@ By sprawdzić czy serwer działa wykonałem \texttt{sudo systemctl status smbd}
 
 Następnie ustawiłem hasło do zasobów serwera \texttt{sudo smbpasswd -a dabrowk1}
 
-By sprawdzić czy zasób jest udostępniany uruchomiłem \texttt{smbclient -L s6 }
+By sprawdzić czy zasób jest udostępniany uruchomiłem \texttt{smbclient -L s6}
 \begin{verbatim}
   smbclient -L s6  
 
@@ -96,6 +105,184 @@ By sprawdzić czy zasób jest udostępniany uruchomiłem \texttt{smbclient -L s6
 	IPC$            IPC       IPC Service (s6 server (Samba, Ubuntu))
 	SK102           Printer   HP LaserJet M402dn
 \end{verbatim}
+
+\section{Windows}
+Obsługę dysków sieciowych na systemie Windows wykonałem na maszynie Wat przy pomocy zdalnego pulpitu.
+
+\subsection{SMB}
+
+\subsubsection{Przeglądanie zasobów}
+By zobaczyć zasoby udostępnione na stacji użyłem \texttt{net view s6}.
+
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=Windows]
+  \begin{lstlisting}
+  net view s6
+  \end{lstlisting}
+  \tcblower
+  \footnotesize
+  \begin{lstlisting}
+  Shared resources at s6
+  
+  s6 server (Samba, Ubuntu)
+
+  Share name  Type   Used as  Comment
+
+  --------------------------------------------------------------
+  sambashare  Disk            Samba na Ubuntu S6
+  SK102       Print           HP LaserJet M402dn
+  The command completed successfully.
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
+
+\subsubsection{Montowanie zasobów}
+Sprawdziłem zamontowane zasoby poleceniem \texttt{net use}.
+
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=Windows]
+  \begin{lstlisting}
+  net use
+  \end{lstlisting}
+  \tcblower
+  \footnotesize
+  \begin{lstlisting}
+  New connections will not be remembered.
+
+
+  Status       Local     Remote                    Network
+  
+  -----------------------------------------------------------
+  OK           H:        \\stud\dabrowk1           Microsoft Windows Network
+  The command completed successfully.
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
+\vspace{5mm}
+
+Następnie połączyłem dysk ze stacji \texttt{c6} poleceniem \texttt{net use :Z \textbackslash{}\textbackslash{}s6\textbackslash{}smbashare}.
+
+By zobaczyć czy dysk jest zamontowany ponownie wykonałem \texttt{net use}.
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=Windows]
+  \begin{lstlisting}
+  net use
+  \end{lstlisting}
+  \tcblower
+  \footnotesize
+  \begin{lstlisting}
+    New connections will not be remembered.
+
+
+    Status       Local     Remote                    Network
+    
+    -----------------------------------------------------------
+    OK           H:        \\stud\dabrowk1           Microsoft Windows Network
+    OK           Z:        \\s6\sambashare           Microsoft Windows Network
+    The command completed successfully.
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
+\vspace{5mm}
+
+By domontować dysk po zakończonej pracy wpisałem \texttt{net use Z: /delete}.
+
+\subsection{NFS}
+
+\subsubsection{Przeglądanie zasobów}
+By zobaczyć zasoby nfs serwara volt uruchomiłem \texttt{showmount -e volt}.
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=Windows]
+  \begin{lstlisting}
+  showmount -e volt
+  \end{lstlisting}
+  \tcblower
+  \footnotesize
+  \begin{lstlisting}
+    Exports list on volt:
+    /tmp/obj                           All Machines
+    /home/stud                         ldap, fed.iem.pw.edu.pl, ...
+    /nfs                               lap
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
+
+\subsubsection{Montowanie zasobów}
+By zamontować katalog udostępniany przez serwer wykonałem \texttt{mount \\volt\ I:}
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=Windows]
+  \begin{lstlisting}
+  mount \\volt\ I:
+  \end{lstlisting}
+  \tcblower
+  \footnotesize
+  \begin{lstlisting}
+  I: is now successfully connected to \\volt\
+
+  The command completed successfully.
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
+\vspace{5mm}
+
+By sprawdzić czy zasób jest poprawnie zamontowany wykonałem \texttt{mount} bez argumentów.
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=Windows]
+  \begin{lstlisting}
+  mount
+  \end{lstlisting}
+  \tcblower
+  \footnotesize
+  \begin{lstlisting}
+  Local    Remote
+  ----------------
+  I:       \\volt\
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
+\vspace{5mm}
+
+Na koniec odłączyłem dysk poleceniem \texttt{umount I:}.
+
+\section{Ubuntu}
+Ćwiczenie wykonałem na stacji laboratoryjne c6, na której wcześniej postawiłem serwer SMB.
+
+\subsection{SMB}
+
+\subsubsection{Przeglądanie zasobów}
+W celu zobaczenia zasobów na stacji uruchomiłem \texttt{smbclient -L s6}
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=Ubuntu]
+  \begin{lstlisting}
+    smbclient -L s6
+  \end{lstlisting}
+  \tcblower
+  \footnotesize
+  \begin{lstlisting}
+    Sharename       Type      Comment
+    ---------       ----      -------
+    print$          Disk      Printer Drivers
+    sambashare      Disk      Samba na Ubuntu S6
+    SK102           Printer   HP LaserJet M402dn
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
+
+\subsubsection{Montowanie zasobów}
+Zamontowałem utworzony wcześniej zasób poleceniem \texttt{sudo mount -t cifs -o user=dabrowk1 //s6/sambashare punktMontowania}.
+
+W celu sprawdzenia poprawności montowania spróbowałem wypisać zawartość zamontowanego katalogu.
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=Ubuntu]
+  \begin{lstlisting}
+  ls punktMontowania
+  \end{lstlisting}
+  \tcblower
+  \footnotesize
+  \begin{lstlisting}
+  plik1.txt
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
+
+\subsection{NFS}
+
+\subsubsection{Przeglądanie zasobów}
+
+
+\section{TMP}
 
 \subsection{Montowanie zasobu SMB}
 \paragraph{Ubuntu} \mbox{} \\
