@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#Konfiguracja sieciowa
+ip address add 10.146.225.156 dev eno1
+
 #Utworzenie zasobow
 mkdir publicznyKatalog
 echo "Ciekawy tekst" >publicznyKatalog/plik.txt
