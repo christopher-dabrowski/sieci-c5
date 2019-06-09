@@ -280,7 +280,47 @@ W celu sprawdzenia poprawności montowania spróbowałem wypisać zawartość za
 \subsection{NFS}
 
 \subsubsection{Przeglądanie zasobów}
+W celu zobaczenia zasobów udostępnianych przez serwer ldap użyłem polecenia \texttt{showmount}.
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=Ubuntu]
+  \begin{lstlisting}
+    showmount -e ldap
+  \end{lstlisting}
+  \tcblower
+  \footnotesize
+  \begin{lstlisting}
+  Export list for ldap:
+  /home/stud2 (everyone)
+  /nfs/arch2  k0.iem.pw.edu.pl,pxe.iem.pw.edu.pl,s2.iem.pw.edu.pl
+  /           (everyone)
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
 
+\subsection{Montowanie zasobów}
+Zamontowałem katalog / z serwera poleceniem \texttt{sudo mount -t nfs ldap:/ mountingPoint}.
+
+W celu testu poprawności montowania spróbowałem wypisać zawartość katalogu.
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=Ubuntu]
+  \begin{lstlisting}
+  ll mountingPoint
+  \end{lstlisting}
+  \tcblower
+  \footnotesize
+  \begin{lstlisting}
+  lrwxr-xr-x  1 root root    21 gru  9 03:32 10
+  lrwxr-xr-x  1 root root    20 gru  6  2018 11
+  lrwxr-xr-x  1 root root    20 lut  3  2018 12
+  lrwxr-xr-x  1 root root    20 paz 23  2018 13
+  -rw-r--r--  1 root root 1000M kwi 15 20:07 1G 
+  -rw-r--r--  1 root root  2,0G kwi 15 20:12 2G
+  drwxr-xr-x  2 root root    47 cze  9 17:31 bin
+  ...
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
+\vspace{5mm}
+
+Na koniec odmontowałem zasób poleceniem \texttt{sudo umount mountingPoint}.
 
 \section{TMP}
 
