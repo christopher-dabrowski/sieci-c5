@@ -322,56 +322,13 @@ W celu testu poprawności montowania spróbowałem wypisać zawartość katalogu
 
 Na koniec odmontowałem zasób poleceniem \texttt{sudo umount mountingPoint}.
 
-\section{TMP}
-
-\subsection{Montowanie zasobu SMB}
-\paragraph{Ubuntu} \mbox{} \\
-Zamontowałem utworzony wcześniej zasób poleceniem \texttt{sudo mount -t cifs -o user=dabrowk1 //s6/sambashare punktMontowania}.
-
-By sprawdzić czy montowanie się powiodło wyświetliłem zawartość katalogu.
-\begin{verbatim}
-  ls punktMontowania 
-
-  plik1.txt
-\end{verbatim}
-
-\paragraph{Windows} \mbox{} \\
-Zbadałem jakie dyski są zamontowane poleceniem \texttt{net use}.
-\begin{verbatim}
-  PS H:\> net use
-  New connections will not be remembered.
-
-
-  Status       Local     Remote                    Network
-
-  -------------------------------------------------------------------------------
-  OK           H:        \\stud\dabrowk1           Microsoft Windows Network
-  The command completed successfully.
-\end{verbatim}
-Jedyny podłączony dysk to H
-
-Następnie montuję dysk poleceniem \texttt{net use Z: \\\\s6\\sambashare}.
-By sprawdzić czy dysk został zamontowany ponownie wywołałem \texttt{net use}.
-\begin{verbatim}
-  net use
-  New connections will not be remembered.
-
-
-  Status       Local     Remote                    Network
-
-  -------------------------------------------------------------------------------
-  OK           H:        \\stud\dabrowk1           Microsoft Windows Network
-  OK           Z:        \\s6\sambashare           Microsoft Windows Network
-  The command completed successfully.
-\end{verbatim}
-
-Po zakończonej pracy odmontowałem dysk poleceniem \texttt{net use Z: /delete}
-
 \section{FreeBSD}
-Zadanie realizowałem na maszynie laboratoryjnej \texttt{se}.
+Realizowałem zadanie zdalnie na stacji \texttt{se}.
 
-\subsection{Oglądanie eksportowanych zasobów}
-Sprawdziełem dyski SMB eksportuje serwer \texttt{volt} poleceniem \texttt{showmount}.
+\subsection{SMB}
+
+\subsubsection{Przeglądanie zasobów}
+Sprawdziłem dyski SMB eksportuje serwer \texttt{volt} poleceniem \texttt{showmount}.
 
 \begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=FreeBSD]
   \begin{lstlisting}
@@ -389,8 +346,33 @@ Sprawdziełem dyski SMB eksportuje serwer \texttt{volt} poleceniem \texttt{showm
 \end{tcolorbox}
 \normalsize
 
-\vspace{1cm}
-Oraz jakie dyski NFS eksportuje serwer \texttt{ldap}.
+\subsubsection{Montowanie zasobów}
+Utworzyłem katalog będący punktem montowania poleceniem \texttt{mkdir mountingPoint}
+
+Zamontowałem katalog z serwera volt poleceniem \texttt{mount\_smbfs -I volt -U dabrowk1 //dabrowk1@volt/lok mountingPoint/}.
+
+By sprawdzić poprawność montowania wypisałem zawartość katalogu.
+\begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=FreeBSD]
+  \begin{lstlisting}
+  ll mountingPoint
+  \end{lstlisting}
+  \tcblower
+  \tiny
+  \begin{lstlisting}
+  drwxr-xr-x  1 root  wheel  16384 Feb  9  2014 backups 
+  drwxr-xr-x  1 root  wheel  16384 Dec 16  2015 e0
+  drwxr-xr-x  1 root  wheel  16384 Oct  6  2014 www
+  \end{lstlisting}
+\end{tcolorbox}
+\normalsize
+\vspace{5mm}
+
+Na koniec odmontowałem katalog poleceniem \texttt{umount mountingPoint}.
+
+\subsection{NFS}
+
+\subsubsection{Przeglądanie zasobów}
+Sprawdziłem jakie dyski NFS eksportuje serwer \texttt{ldap}.
 \begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=FreeBSD]
   \begin{lstlisting}
   showmount -e ldap -t nfs
@@ -406,17 +388,10 @@ Oraz jakie dyski NFS eksportuje serwer \texttt{ldap}.
 \end{tcolorbox}
 \normalsize
 
-\subsection{Montowanie udziałów}
-Utworzyłem katalog będący punktem montowania poleceniem \texttt{mkdir mountingPoint}.
-
-\subsection{SMB}
-\begin{verbatim}
-  root@se:~ # mount -t cifs -o user=dabrowk1 //volt/pub/ mountingPoint/mount: /volt/pub: Operation not supported by device 
-\end{verbatim}
-
-\subsection{NFS}
+\subsubsection{Montowanie zasobów}
 Zamontowałem dysk poleceniem \texttt{mount -t nfs ldap:/ mountingPoint}. Następnie sprawdziłem czy dysk jest zamontowany poleceniem \texttt{df -h}.
 
+Dla odmiany sprawdziłem czy katalog jest zamontowany poleceniem \texttt{df -h}.
 \begin{tcolorbox}[colback=yellow!10!white,colframe=red!45!black,coltitle=yellow!100!black, title=FreeBSD]
   \begin{lstlisting}
   df -h
